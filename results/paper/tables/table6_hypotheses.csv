@@ -1,0 +1,290 @@
+hypothesis,scope,quantity,criterion,value,margin,meets,seed_spread_min_max_of_medians
+H1,tfidf_logreg,M0 clean median coverage,"in band [0.8686, 0.9308]",0.902542372881356,0.02824858757062143,True,
+H1,tfidf_logreg,median |c1 - c0| (M0 clean),>= 0.05,0.056181033104110045,0.0061810331041100425,True,
+H1,tfidf_logreg,meets,both,True,,True,
+H2,tfidf_logreg,M0 median coverage at pi=0.05,< 0.87,0.8754933631856708,-0.005493363185670841,False,
+H2,tfidf_logreg,M0 median coverage at pi=0.1,< 0.87,0.8782056612825844,-0.008205661282584376,False,
+H2,tfidf_logreg,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9042461640151856,0.015753835984814373,True,
+H2,tfidf_logreg,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9039910924057266,0.016008907594273408,True,
+H3a,tfidf_logreg,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.8238482384823849,0.030205815571669237,True,
+H3b,tfidf_logreg,head_25 median c1: M1 vs M0,M1 < M0,0.7415 vs 0.8238,0.08230425547498721,True,M1 ; M0 
+H3b,tfidf_logreg,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0730 [-0.1216, -0.0244]",0.024390243902438935,True,
+H3b,tfidf_logreg,meets,both,True,,True,
+H3c,tfidf_logreg,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9214092140921409,0.019131326448399655,True,
+H3c,tfidf_logreg,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.907859078590786,0.03268146194975463,True,
+H3c,tfidf_logreg,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8891891891891892,0.03513513513513511,True,
+H3c,tfidf_logreg,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.9054054054054054,0.03513513513513522,True,
+H3c,tfidf_logreg,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9132791327913279,0.027261407749212707,True,
+H3c,tfidf_logreg,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8997289972899729,0.04081154325056768,True,
+H3c,tfidf_logreg,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.9,0.04054054054054057,True,
+H3c,tfidf_logreg,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9135135135135135,0.027027027027027084,True,
+H3c,tfidf_logreg,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9108108108108108,0.02972972972972976,True,
+H3c,tfidf_logreg,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9081081081081082,0.032432432432432434,True,
+H3c,tfidf_logreg,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.9051490514905149,0.03539148905002565,True,
+H3c,tfidf_logreg,inside band in all conditions,all 11,True,0.019131326448399655,True,
+H3c,tfidf_logreg,conditions below / above the band (descriptive),,0 below / 0 above,,,
+H1,distilbert,M0 clean median coverage,"in band [0.8686, 0.9308]",0.9014124293785312,0.029378531073446235,True,0.9004 – 0.9025
+H1,distilbert,median |c1 - c0| (M0 clean),>= 0.05,0.08911290277143934,0.039112902771439334,True,0.0151 – 0.1497
+H1,distilbert,meets,both,True,,True,
+H2,distilbert,M0 median coverage at pi=0.05,< 0.87,0.8708071325763633,-0.0008071325763633341,False,0.8304 – 0.9298
+H2,distilbert,M0 median coverage at pi=0.1,< 0.87,0.8741615224692147,-0.004161522469214751,False,0.8383 – 0.9269
+H2,distilbert,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9026863905325443,0.01731360946745573,True,0.9013 – 0.9033
+H2,distilbert,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9022533184071646,0.017746681592835416,True,0.9013 – 0.9034
+H3a,distilbert,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.7713125320442393,0.08274152200981477,True,0.6911 – 0.8757
+H3b,distilbert,head_25 median c1: M1 vs M0,M1 < M0,0.6806 vs 0.7713,0.09066285797993112,True,M1 0.6463 – 0.7669; M0 0.6911 – 0.8757
+H3b,distilbert,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0900 [-0.1416, -0.0508]",0.050797297297297275,True,-0.2216 – 0.0759
+H3b,distilbert,meets,both,True,,True,
+H3c,distilbert,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9582655826558266,-0.017725042115286027,False,0.9512 – 0.9649
+H3c,distilbert,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.937212334285505,0.003328206255035604,True,0.9324 – 0.9486
+H3c,distilbert,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9037837837837838,0.036756756756756825,True,0.9000 – 0.9133
+H3c,distilbert,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8994594594594595,0.041081081081081106,True,0.8946 – 0.9133
+H3c,distilbert,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9297297297297298,0.010810810810810811,True,0.9216 – 0.9377
+H3c,distilbert,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8905149051490515,0.036460851094997415,True,0.8784 – 0.9000
+H3c,distilbert,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8735135135135135,0.01945945945945937,True,0.8568 – 0.8916
+H3c,distilbert,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9388361532263971,0.001704387314143463,True,0.9270 – 0.9514
+H3c,distilbert,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9113513513513514,0.029189189189189224,True,0.8946 – 0.9293
+H3c,distilbert,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.914054054054054,0.02648648648648655,True,0.9054 – 0.9241
+H3c,distilbert,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.8400000000000001,-0.014054054054054022,False,0.8184 – 0.8622
+H3c,distilbert,inside band in all conditions,all 11,False,-0.017725042115286027,False,
+H3c,distilbert,conditions below / above the band (descriptive),,1 below / 1 above,,,
+H1,roberta,M0 clean median coverage,"in band [0.8686, 0.9308]",0.9016949152542373,0.029096045197740117,True,0.9011 – 0.9025
+H1,roberta,median |c1 - c0| (M0 clean),>= 0.05,0.04513214903458808,-0.004867850965411924,False,0.0138 – 0.0966
+H1,roberta,meets,both,False,,False,
+H2,roberta,M0 median coverage at pi=0.05,< 0.87,0.8802093135132534,-0.010209313513253382,False,0.8559 – 0.8964
+H2,roberta,M0 median coverage at pi=0.1,< 0.87,0.8823889333120103,-0.012388933312010297,False,0.8602 – 0.8968
+H2,roberta,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9029134015672476,0.01708659843275238,True,0.9032 – 0.9040
+H2,roberta,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9028335017077982,0.01716649829220183,True,0.9033 – 0.9035
+H3a,roberta,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.7124324324324325,0.14162162162162162,True,0.6541 – 0.7371
+H3b,roberta,head_25 median c1: M1 vs M0,M1 < M0,0.6720 vs 0.7124,0.04044312605288214,True,M1 0.6216 – 0.7189; M0 0.6541 – 0.7371
+H3b,roberta,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0406 [-0.0764, -0.0130]",0.012994579945799454,True,-0.1162 – -0.0027
+H3b,roberta,meets,both,True,,True,
+H3c,roberta,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9545945945945945,-0.01405405405405391,False,0.9459 – 0.9675
+H3c,roberta,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9288229693107742,0.011717571229766355,True,0.9216 – 0.9378
+H3c,roberta,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9086486486486486,0.03189189189189201,True,0.8973 – 0.9243
+H3c,roberta,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8945945945945946,0.04054054054054046,True,0.8755 – 0.9054
+H3c,roberta,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9210810810810811,0.019459459459459483,True,0.9106 – 0.9349
+H3c,roberta,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9016216216216216,0.038918918918918965,True,0.8946 – 0.9106
+H3c,roberta,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.878048780487805,0.02399472643375089,True,0.8486 – 0.9106
+H3c,roberta,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9306233062330623,0.009917234307478262,True,0.9270 – 0.9377
+H3c,roberta,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9043243243243243,0.03621621621621629,True,0.8973 – 0.9133
+H3c,roberta,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9154471544715447,0.025093386068995915,True,0.9106 – 0.9189
+H3c,roberta,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.8738833955907126,0.019829341536658496,True,0.8703 – 0.8823
+H3c,roberta,inside band in all conditions,all 11,False,-0.01405405405405391,False,
+H3c,roberta,conditions below / above the band (descriptive),,0 below / 1 above,,,
+H1,mentalroberta,M0 clean median coverage,"in band [0.8686, 0.9308]",0.9014124293785312,0.029378531073446235,True,0.9011 – 0.9024
+H1,mentalroberta,median |c1 - c0| (M0 clean),>= 0.05,0.045021693934737414,-0.004978306065262589,False,0.0138 – 0.0828
+H1,mentalroberta,meets,both,False,,False,
+H2,mentalroberta,M0 median coverage at pi=0.05,< 0.87,0.880884935231089,-0.010884935231089021,False,0.8645 – 0.8970
+H2,mentalroberta,M0 median coverage at pi=0.1,< 0.87,0.8831026707180554,-0.013102670718055376,False,0.8681 – 0.8976
+H2,mentalroberta,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9031376139453061,0.016862386054693906,True,0.9030 – 0.9037
+H2,mentalroberta,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9031172865750727,0.016882713424927292,True,0.9029 – 0.9035
+H3a,mentalroberta,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.8043360433604336,0.049718010693620474,True,0.7703 – 0.8216
+H3b,mentalroberta,head_25 median c1: M1 vs M0,M1 < M0,0.7434 vs 0.8043,0.06089870358163041,True,M1 0.7100 – 0.7595; M0 0.7703 – 0.8216
+H3b,mentalroberta,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0612 [-0.1006, -0.0217]",0.02167875192265435,True,-0.0946 – -0.0108
+H3b,mentalroberta,meets,both,True,,True,
+H3c,mentalroberta,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9540540540540541,-0.013513513513513487,False,0.9459 – 0.9622
+H3c,mentalroberta,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9262872628726286,0.014253277667911957,True,0.9189 – 0.9405
+H3c,mentalroberta,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9064864864864864,0.03405405405405415,True,0.9027 – 0.9108
+H3c,mentalroberta,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8878048780487805,0.0337508239947264,True,0.8757 – 0.8946
+H3c,mentalroberta,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9254054054054054,0.015135135135135203,True,0.9108 – 0.9377
+H3c,mentalroberta,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9039244122170951,0.03661612832344552,True,0.8973 – 0.9108
+H3c,mentalroberta,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8967567567567567,0.0427027027027026,True,0.8943 – 0.9051
+H3c,mentalroberta,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9371273712737127,0.003413169266827887,True,0.9295 – 0.9432
+H3c,mentalroberta,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9237837837837837,0.01675675675675692,True,0.9108 – 0.9322
+H3c,mentalroberta,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9021621621621622,0.03837837837837843,True,0.8997 – 0.9108
+H3c,mentalroberta,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.8397831978319783,-0.0142708562220758,False,0.8135 – 0.8543
+H3c,mentalroberta,inside band in all conditions,all 11,False,-0.0142708562220758,False,
+H3c,mentalroberta,conditions below / above the band (descriptive),,1 below / 1 above,,,
+H1,qwen_s_tok_P1,M0 clean median coverage,"in band [0.8686, 0.9308]",0.9011299435028248,0.029661016949152574,True,
+H1,qwen_s_tok_P1,median |c1 - c0| (M0 clean),>= 0.05,0.20710059171597628,0.1571005917159763,True,
+H1,qwen_s_tok_P1,meets,both,True,,True,
+H2,qwen_s_tok_P1,M0 median coverage at pi=0.05,< 0.87,0.8032544378698225,0.06674556213017746,True,
+H2,qwen_s_tok_P1,M0 median coverage at pi=0.1,< 0.87,0.8136094674556213,0.056390532544378646,True,
+H2,qwen_s_tok_P1,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9033296017911402,0.01667039820885983,True,
+H2,qwen_s_tok_P1,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9031870880838986,0.01681291191610144,True,
+H3a,qwen_s_tok_P1,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",1.0,-0.1459459459459459,False,
+H3b,qwen_s_tok_P1,head_25 median c1: M1 vs M0,M1 < M0,0.4919 vs 1.0000,0.508108108108108,True,M1 ; M0 
+H3b,qwen_s_tok_P1,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.5081 [-0.5827, -0.4297]",0.4297297297297298,True,
+H3b,qwen_s_tok_P1,meets,both,True,,True,
+H3c,qwen_s_tok_P1,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9243243243243243,0.016216216216216273,True,
+H3c,qwen_s_tok_P1,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.8972972972972973,0.043243243243243246,True,
+H3c,qwen_s_tok_P1,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9,0.04054054054054057,True,
+H3c,qwen_s_tok_P1,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8741558631802534,0.0201018091261993,True,
+H3c,qwen_s_tok_P1,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9054054054054054,0.03513513513513522,True,
+H3c,qwen_s_tok_P1,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8918918918918919,0.037837837837837784,True,
+H3c,qwen_s_tok_P1,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8997289972899729,0.04081154325056768,True,
+H3c,qwen_s_tok_P1,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9216216216216216,0.018918918918918948,True,
+H3c,qwen_s_tok_P1,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9132791327913279,0.027261407749212707,True,
+H3c,qwen_s_tok_P1,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9486486486486486,-0.008108108108108025,False,
+H3c,qwen_s_tok_P1,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.9378378378378378,0.002702702702702786,True,
+H3c,qwen_s_tok_P1,inside band in all conditions,all 11,False,-0.008108108108108025,False,
+H3c,qwen_s_tok_P1,conditions below / above the band (descriptive),,0 below / 1 above,,,
+H1,gemma_s_tok_P1,M0 clean median coverage,"in band [0.8686, 0.9308]",0.900990099009901,0.029800861442076387,True,
+H1,gemma_s_tok_P1,median |c1 - c0| (M0 clean),>= 0.05,0.2043978890132736,0.15439788901327361,True,
+H1,gemma_s_tok_P1,meets,both,True,,True,
+H2,gemma_s_tok_P1,M0 median coverage at pi=0.05,< 0.87,0.8032544378698225,0.06674556213017746,True,
+H2,gemma_s_tok_P1,M0 median coverage at pi=0.1,< 0.87,0.8136094674556213,0.056390532544378646,True,
+H2,gemma_s_tok_P1,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9023094963198153,0.01769050368018475,True,
+H2,gemma_s_tok_P1,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9023267747470374,0.017673225252962648,True,
+H3a,gemma_s_tok_P1,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.9351351351351351,-0.08108108108108103,False,
+H3b,gemma_s_tok_P1,head_25 median c1: M1 vs M0,M1 < M0,0.5393 vs 0.9351,0.39583974218120555,True,M1 ; M0 
+H3b,gemma_s_tok_P1,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.3973 [-0.4688, -0.3459]",0.34594594594594597,True,
+H3b,gemma_s_tok_P1,meets,both,True,,True,
+H3c,gemma_s_tok_P1,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.9378378378378378,0.002702702702702786,True,
+H3c,gemma_s_tok_P1,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9162162162162162,0.02432432432432441,True,
+H3c,gemma_s_tok_P1,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8918918918918919,0.037837837837837784,True,
+H3c,gemma_s_tok_P1,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8648648648648649,0.010810810810810811,True,
+H3c,gemma_s_tok_P1,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9135135135135135,0.027027027027027084,True,
+H3c,gemma_s_tok_P1,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.9,0.04054054054054057,True,
+H3c,gemma_s_tok_P1,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.9027027027027027,0.037837837837837895,True,
+H3c,gemma_s_tok_P1,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9351351351351351,0.005405405405405461,True,
+H3c,gemma_s_tok_P1,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9216216216216216,0.018918918918918948,True,
+H3c,gemma_s_tok_P1,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9105691056910569,0.029971434849483725,True,
+H3c,gemma_s_tok_P1,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.8753387533875339,0.021284699333479762,True,
+H3c,gemma_s_tok_P1,inside band in all conditions,all 11,True,0.002702702702702786,True,
+H3c,gemma_s_tok_P1,conditions below / above the band (descriptive),,0 below / 0 above,,,
+H1,gpt_s_tok_P1,M0 clean median coverage,"in band [0.8686, 0.9308]",0.9011299435028248,0.029661016949152574,True,
+H1,gpt_s_tok_P1,median |c1 - c0| (M0 clean),>= 0.05,0.20710059171597628,0.1571005917159763,True,
+H1,gpt_s_tok_P1,meets,both,True,,True,
+H2,gpt_s_tok_P1,M0 median coverage at pi=0.05,< 0.87,0.8032544378698225,0.06674556213017746,True,
+H2,gpt_s_tok_P1,M0 median coverage at pi=0.1,< 0.87,0.8136094674556213,0.056390532544378646,True,
+H2,gpt_s_tok_P1,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.904639117397091,0.015360882602909003,True,
+H2,gpt_s_tok_P1,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9039674398023366,0.016032560197663397,True,
+H3a,gpt_s_tok_P1,head_25 M0 median c1,"< band low (band [0.8541, 0.9405])",0.9864130434782609,-0.13235898942420676,False,
+H3b,gpt_s_tok_P1,head_25 median c1: M1 vs M0,M1 < M0,0.4905 vs 0.9864,0.49589813832920937,True,M1 ; M0 
+H3b,gpt_s_tok_P1,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.4932 [-0.5595, -0.4351]",0.43513513513513524,True,
+H3b,gpt_s_tok_P1,meets,both,True,,True,
+H3c,gpt_s_tok_P1,clean M3-mix median c1,"in band [0.8541, 0.9405]",0.918918918918919,0.021621621621621623,True,
+H3c,gpt_s_tok_P1,head_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9132791327913279,0.027261407749212707,True,
+H3c,gpt_s_tok_P1,head_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8891891891891892,0.03513513513513511,True,
+H3c,gpt_s_tok_P1,head_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.827027027027027,-0.027027027027027084,False,
+H3c,gpt_s_tok_P1,tail_75 M3-mix median c1,"in band [0.8541, 0.9405]",0.9054054054054054,0.03513513513513522,True,
+H3c,gpt_s_tok_P1,tail_50 M3-mix median c1,"in band [0.8541, 0.9405]",0.8915989159891599,0.037544861935105756,True,
+H3c,gpt_s_tok_P1,tail_25 M3-mix median c1,"in band [0.8541, 0.9405]",0.8834688346883469,0.029414780634292814,True,
+H3c,gpt_s_tok_P1,del_15 M3-mix median c1,"in band [0.8541, 0.9405]",0.9351351351351351,0.005405405405405461,True,
+H3c,gpt_s_tok_P1,del_30 M3-mix median c1,"in band [0.8541, 0.9405]",0.9297297297297298,0.010810810810810811,True,
+H3c,gpt_s_tok_P1,typo_05 M3-mix median c1,"in band [0.8541, 0.9405]",0.9512195121951219,-0.010678971654581315,False,
+H3c,gpt_s_tok_P1,typo_10 M3-mix median c1,"in band [0.8541, 0.9405]",0.927027027027027,0.013513513513513598,True,
+H3c,gpt_s_tok_P1,inside band in all conditions,all 11,False,-0.027027027027027084,False,
+H3c,gpt_s_tok_P1,conditions below / above the band (descriptive),,1 below / 1 above,,,
+H1,tally,models meeting (H1),>= 4,5 of 7,1.0,True,
+H2,tally,models meeting (H2a),>= 4,3 of 7,-1.0,False,
+H2,tally,models meeting (H2b),>= 4,7 of 7,3.0,True,
+H3a,tally,models meeting (H3a),>= 4,4 of 7,0.0,True,
+H3b,tally,models meeting (H3b),>= 4,7 of 7,3.0,True,
+H3c,tally,models meeting (H3c),>= 4,2 of 7,-2.0,False,
+H1,verdict,confirmed,majority >= 4,True,,True,
+H3a,verdict,confirmed,majority >= 4,True,,True,
+H3b,verdict,confirmed,majority >= 4,True,,True,
+H3c,verdict,confirmed,majority >= 4,False,,False,
+H2,verdict,confirmed,M0 part and M1 part each >= 4,False,,False,
+H4,distilbert/abuse,LODO M0 median coverage,< band low 0.8451,0.8732394366197184,-0.028139436619718405,False,0.8592 – 0.8873
+H4,distilbert/anxiety,LODO M0 median coverage,< band low 0.8447,0.9151138716356106,-0.07041387163561064,False,0.9130 – 0.9193
+H4,distilbert/financial,LODO M0 median coverage,< band low 0.8462,0.8834498834498835,-0.03724988344988356,False,0.8811 – 0.8951
+H4,distilbert/ptsd,LODO M0 median coverage,< band low 0.8425,0.8661417322834645,-0.023641732283464445,False,0.8583 – 0.8819
+H4,distilbert/social,LODO M0 median coverage,< band low 0.8451,0.8145539906103286,0.030546009389671336,True,0.7958 – 0.8380
+H4,verdict,"worst domain (primary social, pooled social) below its band",worst-domain median < band low,True,0.030546009389671336,True,
+H5,gpt_s_tok_P1,validation macro-F1 (selects the best LLM),max,0.6587651774174037,,False,
+H5,qwen_s_tok_P1,validation macro-F1 (selects the best LLM),max,0.6089588139035114,,False,
+H5,gemma_s_tok_P1,validation macro-F1 (selects the best LLM),max,0.6728016879782392,,True,
+H5,part 1 / workload,"workload per 1,000 (verdict measure): best LLM (gemma S-tok) vs RoBERTa",best LLM > RoBERTa,345.8 vs 343.7,2.0304872631326703,True,RoBERTa 336.2 – 346.7
+H5,part 1 / workload,"paired gemma - RoBERTa per resplit: median [2.5%, 97.5%] (descriptive)",,"2.9232 [-46.4, 52.1]",,,
+H5,part 2 / workload / gpt,"workload per 1,000 (verdict measure): S-verb vs S-tok",S-verb > S-tok,366.9 vs 373.3,-6.369991726464491,False,
+H5,part 2 / workload / qwen,"workload per 1,000 (verdict measure): S-verb vs S-tok",S-verb > S-tok,433.2 vs 422.9,10.370514835805693,True,
+H5,part 2 / workload / gemma,"workload per 1,000 (verdict measure): S-verb vs S-tok",S-verb > S-tok,381.6 vs 345.8,35.81988179549154,True,
+H5,part 2 / workload,LLMs with S-verb > S-tok,>= 2 of 3,2 of 3,0.0,True,
+H5,part 1 / uncertainty_referral,"referrals per 1,000 (secondary, descriptive): best LLM (gemma S-tok) vs RoBERTa",best LLM > RoBERTa,188.1 vs 182.2,5.883039772345597,True,RoBERTa 176.0 – 188.3
+H5,part 1 / uncertainty_referral,"paired gemma - RoBERTa per resplit: median [2.5%, 97.5%] (descriptive)",,"5.2143 [-51.4, 62.2]",,,
+H5,part 2 / uncertainty_referral / gpt,"referrals per 1,000 (secondary, descriptive): S-verb vs S-tok",S-verb > S-tok,267.2 vs 229.0,38.188529126615435,True,
+H5,part 2 / uncertainty_referral / qwen,"referrals per 1,000 (secondary, descriptive): S-verb vs S-tok",S-verb > S-tok,335.5 vs 281.5,54.0397129702946,True,
+H5,part 2 / uncertainty_referral / gemma,"referrals per 1,000 (secondary, descriptive): S-verb vs S-tok",S-verb > S-tok,253.8 vs 188.1,65.66825593092008,True,
+H5,part 2 / uncertainty_referral,LLMs with S-verb > S-tok,>= 2 of 3,3 of 3,1.0,True,
+H5,GPT (descriptive),"workload per 1,000: S-tok / S-verb / S-cons",no criterion,373.3 / 366.9 / 667.2,,,
+H5,verdict,"confirmed (workload per 1,000)",part 1 and part 2,True,,True,
+H5,verdict under the secondary measure (descriptive),confirmed (referrals),part 1 and part 2,True,,,
+H6,distilbert,"AUROC full set (M0) -> non-unanimous label, median",> 0.60,0.6117275807702853,0.01172758077028535,True,0.6004 – 0.6215
+H6,distilbert,"AUROC, 2.5% quantile over resplits",> 0.5,0.5875033417744268,0.08750334177442676,True,
+H6,verdict,confirmed,both,True,,True,
+R1,tfidf_logreg,M0 clean median coverage,"in band [0.8540, 0.9421]",0.9033149171270718,0.03883384320350669,True,
+R1,tfidf_logreg,median |c1 - c0| (M0 clean),>= 0.05,0.01611923987614594,-0.03388076012385406,False,
+R1,tfidf_logreg,meets,both,False,,False,
+R2,tfidf_logreg,M0 median coverage at pi=0.05,< 0.87,0.896680529415336,-0.02668052941533605,False,
+R2,tfidf_logreg,M0 median coverage at pi=0.1,< 0.87,0.8977566632262766,-0.027756663226276568,False,
+R2,tfidf_logreg,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9071200898548964,0.012879910145103573,True,
+R2,tfidf_logreg,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9065418007406958,0.013458199259304231,True,
+R3a,tfidf_logreg,head_25 M0 median c1,"< band low (band [0.8343, 0.9558])",0.8674033149171271,-0.03314917127071826,False,
+R3b,tfidf_logreg,head_25 median c1: M1 vs M0,M1 < M0,0.8619 vs 0.8674,0.0055248618784530246,True,M1 ; M0 
+R3b,tfidf_logreg,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0055 [-0.0663, 0.0166]",-0.016574585635359074,False,
+R3b,tfidf_logreg,meets,both,False,,False,
+R3c,tfidf_logreg,clean M3-mix median c1,"in band [0.8343, 0.9558]",0.9277777777777778,0.02802332719459788,True,
+R3c,tfidf_logreg,head_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.9222222222222223,0.033578882750153416,True,
+R3c,tfidf_logreg,head_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.9168968692449355,0.03890423572744017,True,
+R3c,tfidf_logreg,head_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.9,0.05580110497237567,True,
+R3c,tfidf_logreg,tail_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.9226519337016574,0.03314917127071826,True,
+R3c,tfidf_logreg,tail_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.9392265193370166,0.016574585635359074,True,
+R3c,tfidf_logreg,tail_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.9337016574585635,0.02209944751381221,True,
+R3c,tfidf_logreg,del_15 M3-mix median c1,"in band [0.8343, 0.9558]",0.9226519337016574,0.03314917127071826,True,
+R3c,tfidf_logreg,del_30 M3-mix median c1,"in band [0.8343, 0.9558]",0.9277777777777778,0.02802332719459788,True,
+R3c,tfidf_logreg,typo_05 M3-mix median c1,"in band [0.8343, 0.9558]",0.9281767955801105,0.027624309392265234,True,
+R3c,tfidf_logreg,typo_10 M3-mix median c1,"in band [0.8343, 0.9558]",0.9116022099447514,0.04419889502762431,True,
+R3c,tfidf_logreg,inside band in all conditions,all 11,True,0.016574585635359074,True,
+R3c,tfidf_logreg,conditions below / above the band (descriptive),,0 below / 0 above,,,
+R1,distilbert,M0 clean median coverage,"in band [0.8540, 0.9421]",0.9035812672176309,0.038567493112947604,True,0.9008 – 0.9036
+R1,distilbert,median |c1 - c0| (M0 clean),>= 0.05,0.05296092796092797,0.0029609279609279643,True,0.0270 – 0.0984
+R1,distilbert,meets,both,True,,True,
+R2,distilbert,M0 median coverage at pi=0.05,< 0.87,0.8803144921376965,-0.01031449213769653,False,0.8575 – 0.8917
+R2,distilbert,M0 median coverage at pi=0.1,< 0.87,0.8831009046202416,-0.013100904620241605,False,0.8632 – 0.8933
+R2,distilbert,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9084518311645384,0.011548168835461597,True,0.9068 – 0.9099
+R2,distilbert,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.9077063492063493,0.012293650793650728,True,0.9065 – 0.9090
+R3a,distilbert,head_25 M0 median c1,"< band low (band [0.8343, 0.9558])",0.9138121546961326,-0.07955801104972382,False,0.8895 – 0.9503
+R3b,distilbert,head_25 median c1: M1 vs M0,M1 < M0,0.8748 vs 0.9138,0.03902087170042967,True,M1 0.8508 – 0.8895; M0 0.8895 – 0.9503
+R3b,distilbert,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.0378 [-0.0939, -0.0089]",0.008888888888888901,True,-0.0718 – -0.0221
+R3b,distilbert,meets,both,True,,True,
+R3c,distilbert,clean M3-mix median c1,"in band [0.8343, 0.9558]",0.9226519337016574,0.03314917127071826,True,0.9222 – 0.9282
+R3c,distilbert,head_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.901657458563536,0.05414364640883973,True,0.8975 – 0.9061
+R3c,distilbert,head_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.8740331491712707,0.03977900552486191,True,0.8564 – 0.8840
+R3c,distilbert,head_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.8607734806629834,0.026519337016574607,True,0.8398 – 0.8785
+R3c,distilbert,tail_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.9171270718232044,0.03867403314917128,True,0.9061 – 0.9282
+R3c,distilbert,tail_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.9303867403314918,0.02541436464088387,True,0.9171 – 0.9392
+R3c,distilbert,tail_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.8972375690607735,0.05856353591160224,True,0.8785 – 0.9278
+R3c,distilbert,del_15 M3-mix median c1,"in band [0.8343, 0.9558]",0.9144444444444444,0.0413566605279313,True,0.9111 – 0.9171
+R3c,distilbert,del_30 M3-mix median c1,"in band [0.8343, 0.9558]",0.8928176795580111,0.05856353591160224,True,0.8889 – 0.9006
+R3c,distilbert,typo_05 M3-mix median c1,"in band [0.8343, 0.9558]",0.9513812154696133,0.0044198895027623974,True,0.9282 – 0.9779
+R3c,distilbert,typo_10 M3-mix median c1,"in band [0.8343, 0.9558]",0.9679558011049723,-0.012154696132596565,False,0.9558 – 0.9834
+R3c,distilbert,inside band in all conditions,all 11,False,-0.012154696132596565,False,
+R3c,distilbert,conditions below / above the band (descriptive),,0 below / 1 above,,,
+R1,qwen_s_tok_P1,M0 clean median coverage,"in band [0.8540, 0.9421]",0.9060773480662984,0.03607141226428012,True,
+R1,qwen_s_tok_P1,median |c1 - c0| (M0 clean),>= 0.05,0.18681318681318682,0.13681318681318683,True,
+R1,qwen_s_tok_P1,meets,both,True,,True,
+R2,qwen_s_tok_P1,M0 median coverage at pi=0.05,< 0.87,0.8225274725274725,0.047472527472527504,True,
+R2,qwen_s_tok_P1,M0 median coverage at pi=0.1,< 0.87,0.8318681318681319,0.038131868131868085,True,
+R2,qwen_s_tok_P1,M1 median coverage at pi=0.05,within 0.90 +/- 0.02,0.9048748473748474,0.015125152625152665,True,
+R2,qwen_s_tok_P1,M1 median coverage at pi=0.1,within 0.90 +/- 0.02,0.903773079284129,0.016226920715871045,True,
+R3a,qwen_s_tok_P1,head_25 M0 median c1,"< band low (band [0.8343, 0.9558])",1.0,-0.16574585635359118,False,
+R3b,qwen_s_tok_P1,head_25 median c1: M1 vs M0,M1 < M0,0.7667 vs 1.0000,0.23333333333333328,True,M1 ; M0 
+R3b,qwen_s_tok_P1,"paired M1 - M0 c1: median [2.5%, 97.5%]",upper end < 0,"-0.2320 [-0.3646, -0.1444]",0.1444444444444445,True,
+R3b,qwen_s_tok_P1,meets,both,True,,True,
+R3c,qwen_s_tok_P1,clean M3-mix median c1,"in band [0.8343, 0.9558]",0.9168968692449355,0.03890423572744017,True,
+R3c,qwen_s_tok_P1,head_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.8839779005524862,0.04972375690607733,True,
+R3c,qwen_s_tok_P1,head_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.8784530386740331,0.04419889502762431,True,
+R3c,qwen_s_tok_P1,head_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.8833333333333333,0.049079189686924485,True,
+R3c,qwen_s_tok_P1,tail_75 M3-mix median c1,"in band [0.8343, 0.9558]",0.8839779005524862,0.04972375690607733,True,
+R3c,qwen_s_tok_P1,tail_50 M3-mix median c1,"in band [0.8343, 0.9558]",0.8729281767955801,0.03867403314917128,True,
+R3c,qwen_s_tok_P1,tail_25 M3-mix median c1,"in band [0.8343, 0.9558]",0.8729281767955801,0.03867403314917128,True,
+R3c,qwen_s_tok_P1,del_15 M3-mix median c1,"in band [0.8343, 0.9558]",0.9333333333333333,0.022467771639042344,True,
+R3c,qwen_s_tok_P1,del_30 M3-mix median c1,"in band [0.8343, 0.9558]",0.9502762430939227,0.0055248618784530246,True,
+R3c,qwen_s_tok_P1,typo_05 M3-mix median c1,"in band [0.8343, 0.9558]",0.9337016574585635,0.02209944751381221,True,
+R3c,qwen_s_tok_P1,typo_10 M3-mix median c1,"in band [0.8343, 0.9558]",0.9388888888888889,0.01691221608348681,True,
+R3c,qwen_s_tok_P1,inside band in all conditions,all 11,True,0.0055248618784530246,True,
+R3c,qwen_s_tok_P1,conditions below / above the band (descriptive),,0 below / 0 above,,,
+R1,tally,models meeting (R1),>= 2,2 of 3,0.0,True,
+R2,tally,models meeting (R2a),>= 2,1 of 3,-1.0,False,
+R2,tally,models meeting (R2b),>= 2,3 of 3,1.0,True,
+R3a,tally,models meeting (R3a),>= 2,0 of 3,-2.0,False,
+R3b,tally,models meeting (R3b),>= 2,2 of 3,0.0,True,
+R3c,tally,models meeting (R3c),>= 2,2 of 3,0.0,True,
+R1,verdict,confirmed,majority >= 2,True,,True,
+R3a,verdict,confirmed,majority >= 2,False,,False,
+R3b,verdict,confirmed,majority >= 2,True,,True,
+R3c,verdict,confirmed,majority >= 2,True,,True,
+R2,verdict,confirmed,M0 part and M1 part each >= 2,False,,False,

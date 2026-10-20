@@ -1,0 +1,155 @@
+seed: 42
+
+data:
+  name: "dreaddit"
+  dataset_name: "asmaab/dreaddit"
+  # Hugging Face dataset revision (pinned commit).
+  revision: "172a8a10aca8629a6e0b4b34b97299f38f0dd395"
+  processed_dir: "data/processed/dreaddit"
+  # Pool = HF train + validation, StratifiedGroupKFold by post_id; inclusive fold ranges; official HF test kept as test.
+  split:
+    n_splits: 20
+    train_folds: [0, 11]
+    validation_folds: [12, 14]
+    calibration_folds: [15, 19]
+    # Incremented until the calibration minimums below hold.
+    random_state: 42
+    min_calibration_rows: 650
+    min_calibration_rows_per_class: 300
+
+baselines:
+  max_features: 20000
+  ngram_range: [1, 2]
+  # LogReg C by validation macro-F1 (ties -> smaller C); LinearSVC uses C = 1.
+  logreg_c_grid: [0.1, 0.3, 1, 3, 10]
+
+paths:
+  runs_dir: "results/runs"
+  checkpoints_dir: "results/checkpoints/tmp"
+  manifests_dir: "data/manifests"
+  checks_dir: "results/checks"
+
+# <family>_<percent>: head/tail keep that share of words, del/typo apply at that rate; order = M3-mix draw order.
+conditions: [
+  "clean",
+  "head_75", "head_50", "head_25",
+  "tail_75", "tail_50", "tail_25",
+  "del_15", "del_30",
+  "typo_05", "typo_10",
+]
+
+encoders:
+  models:
+    distilbert: "distilbert-base-uncased"
+    roberta: "roberta-base"
+    mentalroberta: "mental/mental-roberta-base"
+  seeds: [13, 42, 101, 2024, 7777]
+  max_length: 512
+  batch_size: 16
+  gradient_accumulation_steps: 1
+  # Same effective batch 16; used after Metal out-of-memory errors at 16 x 1.
+  batch_overrides:
+    roberta: {batch_size: 8, gradient_accumulation_steps: 2}
+    mentalroberta: {batch_size: 8, gradient_accumulation_steps: 2}
+  torch_empty_cache_steps: 10
+  # Bounds the number of distinct batch shapes MPS compiles graphs for (memory only).
+  pad_to_multiple_of: 64
+  learning_rate: 2.0e-5
+  num_train_epochs: 3
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  # Sentence occlusion on the clean test split.
+  occlusion_models: ["distilbert", "roberta"]
+  # Sentence splitter for occlusion: NLTK punkt_tab at a pinned commit.
+  punkt:
+    url: "https://raw.githubusercontent.com/nltk/nltk_data/4f15a3d89eefe9748ec1c05be495d91289197155/packages/tokenizers/punkt_tab.zip"
+    sha256: "e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106"
+    nltk_dir: "data/nltk"
+
+conformal:
+  # Scores s_y = log p_other - log p_y (same sets as LAC 1 - p_y).
+  alpha_values: [0.1, 0.05]   # 0.10 main, 0.05 appendix
+  prevalence_grid: [0.05, 0.10, 0.20, 0.35, 0.52]
+  # Appendix only: U(0, tie_jitter) added to the scores of evaluation.jitter_runs.
+  tie_jitter: 1.0e-9
+
+evaluation:
+  # resplit (main): grouped resplits of calibration ∪ test; official_test: bootstraps of calibration.
+  n_replicates: 1000
+  protocols: [resplit, official_test]
+  methods: [M0, M1, M2, M3, M3-mix, M5, B1, B2]
+  # B3: these methods on the seed ensemble.
+  ensemble_methods: [M0, M1]
+  group_column: post_id
+  # Per-group metrics on the first n_group_replicates only.
+  group_types: [domain, domain_class, agreement]
+  n_group_replicates: 200
+  resplit_folds: 2
+  workers: 6
+  jitter_runs: [gpt_s_verb_P1, qwen_s_verb_P1, gemma_s_verb_P1, gpt_s_cons_P1]
+  output_dir: "results/evaluation/dreaddit"
+
+llm:
+  models: [gpt, qwen, gemma]
+  # mlx-lm, 4-bit.
+  local_models:
+    qwen: "mlx-community/Qwen3-4B-Instruct-2507-4bit"
+    gemma: "mlx-community/gemma-4-e4b-it-OptiQ-4bit"
+  # Dated snapshot, not the alias.
+  api_model: "gpt-4.1-mini-2025-04-14"
+  api_workers: 8
+  api_max_retries: 8
+  # Requests are spaced to stay below this share of the account's rate limits.
+  api_rate_limit_fraction: 0.9
+  api_max_requests_per_minute: 450
+  system: "You are a careful annotator of Reddit posts for a research study on stress."
+  prompts:
+    P1: "Read the following Reddit post excerpt.\nPost: \"\"\"{text}\"\"\"\nIs the author of this post expressing stress? Answer with one word: Yes or No."
+    P2: "Here is a text from a Reddit community:\n{text}\nDoes the writer seem to be under stress (feeling pressure, worry, or strain in their situation)? Reply with one word: Yes or No."
+    P3: "Text: {text}\nQuestion: Is the author of this text stressed? Answer Yes or No."
+  # S-verb replaces this sentence with verbal_instruction.
+  answer_format:
+    P1: "Answer with one word: Yes or No."
+    P2: "Reply with one word: Yes or No."
+    P3: "Answer Yes or No."
+  verbal_instruction: "Reply with only a number from 0 to 100: the probability that the author is expressing stress."
+  # S-tok: first-token probabilities summed over these variants.
+  yes_tokens: ["Yes", "yes", " Yes", " yes"]
+  no_tokens: ["No", "no", " No", " no"]
+  # Prefix for local models whose answer mass is below mass_threshold in the preflight check (none needed it).
+  answer_prefix: "Answer:"
+  answer_prefix_models: []
+  mass_threshold: 0.9
+  check_examples: 50
+  top_logprobs: 20
+  verbal_max_tokens: 8
+  consistency:
+    n: 10
+    temperature: 0.7
+    max_tokens: 3
+  # Calibration + test in these conditions, plus clean validation; s_cons is GPT only.
+  run_plan:
+    - {method: s_tok, prompts: [P1], conditions: all}
+    - {method: s_tok, prompts: [P2, P3], conditions: [clean, head_25, tail_25, del_30]}
+    - {method: s_verb, prompts: [P1], conditions: [clean, head_25, tail_25, del_30]}
+    - {method: s_cons, prompts: [P1], conditions: [clean, head_25, tail_25, del_30]}
+  # Keyed by a hash of the request; no prompt or post text.
+  cache_dir: "results/llm/dreaddit/cache"
+  output_dir: "results/llm/dreaddit"
+  # USD per 1M tokens (checked 2026-10-05), for cost reports only.
+  api_price_per_million: {input: 0.40, output: 1.60}
+
+prevalence:
+  # Bootstrap check of the analytic prevalence reweighting.
+  check_replicates: 100
+  check_draws: 10
+  check_tolerance: 0.005
+
+lodo:
+  # Leave-one-domain-out: DistilBERT retrained without the domain, tested on its official test rows.
+  domains: [abuse, anxiety, financial, ptsd, social]
+  model: distilbert
+  seeds: [13, 42, 101]
+  llm_runs: [gpt_s_tok_P1, qwen_s_tok_P1, gemma_s_tok_P1]
+  methods: [M0, M1]
+  n_bootstraps: 1000

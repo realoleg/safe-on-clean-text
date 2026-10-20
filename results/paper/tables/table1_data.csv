@@ -1,0 +1,94 @@
+dataset,split,quantity,value
+dreaddit,train,rows,1692
+dreaddit,train,posts,1393
+dreaddit,train,risk (stress) rows,889
+dreaddit,train,risk share,0.5254137115839244
+dreaddit,train,median words,81
+dreaddit,train,domain abuse: rows,344
+dreaddit,train,domain abuse: risk share,0.5726744186046512
+dreaddit,train,domain anxiety: rows,329
+dreaddit,train,domain anxiety: risk share,0.6504559270516718
+dreaddit,train,domain financial: rows,321
+dreaddit,train,domain financial: risk share,0.3956386292834891
+dreaddit,train,domain ptsd: rows,357
+dreaddit,train,domain ptsd: risk share,0.5826330532212886
+dreaddit,train,domain social: rows,341
+dreaddit,train,domain social: risk share,0.41935483870967744
+dreaddit,train,agreement 0.43-0.60: rows,540
+dreaddit,train,agreement 0.67-0.86: rows,481
+dreaddit,train,agreement 1.00: rows,671
+dreaddit,validation,rows,422
+dreaddit,validation,posts,354
+dreaddit,validation,risk (stress) rows,222
+dreaddit,validation,risk share,0.5260663507109005
+dreaddit,validation,median words,80
+dreaddit,validation,domain abuse: rows,64
+dreaddit,validation,domain abuse: risk share,0.609375
+dreaddit,validation,domain anxiety: rows,87
+dreaddit,validation,domain anxiety: risk share,0.6091954022988506
+dreaddit,validation,domain financial: rows,106
+dreaddit,validation,domain financial: risk share,0.4056603773584906
+dreaddit,validation,domain ptsd: rows,83
+dreaddit,validation,domain ptsd: risk share,0.5180722891566265
+dreaddit,validation,domain social: rows,82
+dreaddit,validation,domain social: risk share,0.5365853658536586
+dreaddit,validation,agreement 0.43-0.60: rows,128
+dreaddit,validation,agreement 0.67-0.86: rows,117
+dreaddit,validation,agreement 1.00: rows,177
+dreaddit,calibration,rows,700
+dreaddit,calibration,posts,579
+dreaddit,calibration,risk (stress) rows,370
+dreaddit,calibration,risk share,0.5285714285714286
+dreaddit,calibration,median words,80
+dreaddit,calibration,domain abuse: rows,142
+dreaddit,calibration,domain abuse: risk share,0.5352112676056338
+dreaddit,calibration,domain anxiety: rows,147
+dreaddit,calibration,domain anxiety: risk share,0.6666666666666666
+dreaddit,calibration,domain financial: rows,144
+dreaddit,calibration,domain financial: risk share,0.3958333333333333
+dreaddit,calibration,domain ptsd: rows,138
+dreaddit,calibration,domain ptsd: risk share,0.572463768115942
+dreaddit,calibration,domain social: rows,129
+dreaddit,calibration,domain social: risk share,0.46511627906976744
+dreaddit,calibration,agreement 0.43-0.60: rows,227
+dreaddit,calibration,agreement 0.67-0.86: rows,204
+dreaddit,calibration,agreement 1.00: rows,269
+dreaddit,test,rows,715
+dreaddit,test,posts,586
+dreaddit,test,risk (stress) rows,369
+dreaddit,test,risk share,0.5160839160839161
+dreaddit,test,median words,81
+dreaddit,test,domain abuse: rows,142
+dreaddit,test,domain abuse: risk share,0.5492957746478874
+dreaddit,test,domain anxiety: rows,161
+dreaddit,test,domain anxiety: risk share,0.5900621118012422
+dreaddit,test,domain financial: rows,143
+dreaddit,test,domain financial: risk share,0.3776223776223776
+dreaddit,test,domain ptsd: rows,127
+dreaddit,test,domain ptsd: risk share,0.6456692913385826
+dreaddit,test,domain social: rows,142
+dreaddit,test,domain social: risk share,0.4225352112676056
+dreaddit,test,agreement 0.43-0.60: rows,153
+dreaddit,test,agreement 0.67-0.86: rows,199
+dreaddit,test,agreement 1.00: rows,265
+dreaddit,test,agreement missing: rows,98
+sdcnl,train,rows,915
+sdcnl,train,author groups,845
+sdcnl,train,risk (suicidal ideation) rows,459
+sdcnl,train,risk share,0.5016393442622951
+sdcnl,train,median words,108
+sdcnl,validation,rows,182
+sdcnl,validation,author groups,168
+sdcnl,validation,risk (suicidal ideation) rows,92
+sdcnl,validation,risk share,0.5054945054945055
+sdcnl,validation,median words,133
+sdcnl,calibration,rows,361
+sdcnl,calibration,author groups,339
+sdcnl,calibration,risk (suicidal ideation) rows,181
+sdcnl,calibration,risk share,0.5013850415512465
+sdcnl,calibration,median words,119
+sdcnl,test,rows,364
+sdcnl,test,author groups,336
+sdcnl,test,risk (suicidal ideation) rows,180
+sdcnl,test,risk share,0.4945054945054945
+sdcnl,test,median words,115

@@ -1,0 +1,52 @@
+[project]
+name = "safe-on-clean-text"
+version = "0.1.0"
+description = "Safe on Clean Text: How Conformal Mental-Health Screening Fails Quietly. Code and experiments for the paper."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "accelerate>=1.13.0",
+    "datasets",
+    "matplotlib",
+    "mlx-lm>=0.31.3,<0.32",
+    "nltk>=3.10.3",
+    "numpy",
+    "openai>=3.24.0",
+    "pandas",
+    "pyarrow>=23.0.1",
+    "python-dotenv>=1.2.4",
+    "pyyaml",
+    "safetensors>=0.7.0",
+    "scikit-learn",
+    "scipy>=1.17.1",
+    "torch",
+    "transformers",
+]
+
+[project.scripts]
+safe-on-clean-text = "safe_on_clean_text.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.1,<0.12"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+addopts = "-m 'not network'"
+markers = [
+    "network: needs network access (Hugging Face, GitHub raw)",
+]

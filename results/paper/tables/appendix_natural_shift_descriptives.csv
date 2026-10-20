@@ -1,0 +1,41 @@
+group,domain,quantity,value
+pool,,rows,1415.0
+pool,,word count quantile 0,12.0
+pool,,word count quantile 0.05,44.0
+pool,,word count quantile 0.1,53.0
+pool,,word count quantile 0.25,65.0
+pool,,word count quantile 0.5,81.0
+pool,,word count quantile 0.75,102.0
+pool,,word count quantile 0.9,127.0
+pool,,word count quantile 0.95,143.0
+pool,,word count quantile 1,268.0
+long,,rows,709.0
+long,,median words,102.0
+long,,risk share,0.5712270803949224
+long,abuse,domain share,0.19605077574047955
+long,anxiety,domain share,0.22284908321579688
+long,financial,domain share,0.1918194640338505
+long,ptsd,domain share,0.18335684062059238
+long,social,domain share,0.2059238363892807
+short,,rows,367.0
+short,,median words,55.0
+short,,risk share,0.43869209809264303
+short,abuse,domain share,0.18256130790190736
+short,anxiety,domain share,0.20708446866485014
+short,financial,domain share,0.23705722070844687
+short,ptsd,domain share,0.21798365122615804
+short,social,domain share,0.1553133514986376
+resplits,,short risk posts per test half: median,80.0
+resplits,,short risk posts per test half: q025,70.0
+resplits,,short risk posts per test half: q975,92.0
+resplits,,short posts per test half: median,183.0
+resplits,,short posts per test half: q025,168.0
+resplits,,short posts per test half: q975,202.0
+resplits,,long risk posts per calibration half: median,202.0
+resplits,,long risk posts per calibration half: q025,189.0
+resplits,,long risk posts per calibration half: q975,215.0
+resplits,,<= 40-word risk posts per test half: median,12.0
+resplits,,<= 40-word risk posts per test half: q025,7.0
+resplits,,<= 40-word risk posts per test half: q975,17.0
+pool,,<= 40 words,52.0
+pool,,"<= 40 words, risk",24.0

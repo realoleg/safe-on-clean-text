@@ -1,0 +1,66 @@
+# SDCNL replication: inherits dreaddit.yaml; null removes an inherited key.
+extends: dreaddit.yaml
+
+data:
+  name: "sdcnl"
+  # Pinned commit of ayaanzhaque/SDCNL; downloaded by `prepare`, never stored here.
+  source_url: "https://raw.githubusercontent.com/ayaanzhaque/SDCNL/ddf995aabd028657385cac6cee92c5d53774992d/data/combined-set.csv"
+  source_sha256: "8f00c4e55fbde15cd4caba729568d3036ed7b6e438b273e39b1e4d02da18b011"
+  raw_path: "data/raw/sdcnl_combined-set.csv"
+  processed_dir: "data/processed/sdcnl"
+  # text = title + ". " + selftext, cut to its first max_words words.
+  max_words: 300
+  dataset_name: null
+  revision: null
+  # StratifiedGroupKFold by author; inclusive fold ranges.
+  split:
+    n_splits: 20
+    train_folds: [0, 9]
+    validation_folds: [10, 11]
+    calibration_folds: [12, 15]
+    test_folds: [16, 19]
+    random_state: 42
+    min_rows: 340
+    min_rows_per_class: 150
+    min_calibration_rows: null
+    min_calibration_rows_per_class: null
+
+encoders:
+  models:
+    roberta: null
+    mentalroberta: null
+  occlusion_models: []
+  # 8 x 2 after Metal out-of-memory errors at 16 x 1 (longer texts).
+  batch_overrides:
+    roberta: null
+    mentalroberta: null
+    distilbert: {batch_size: 8, gradient_accumulation_steps: 2}
+
+llm:
+  models: [qwen]
+  system: "You are a careful annotator of Reddit posts for a research study on suicide risk."
+  prompts:
+    P1: "Read the following Reddit post.\nPost: \"\"\"{text}\"\"\"\nDoes the author of this post express suicidal thoughts or intent? Answer with one word: Yes or No."
+    P2: null
+    P3: null
+  answer_format:
+    P1: "Answer with one word: Yes or No."
+    P2: null
+    P3: null
+  cache_dir: "results/llm/sdcnl/cache"
+  output_dir: "results/llm/sdcnl"
+  run_plan:
+    - {method: s_tok, prompts: [P1], conditions: all}
+
+evaluation:
+  output_dir: "results/evaluation/sdcnl"
+  # Resplits by author only; no domains, agreement or ensembles.
+  group_column: "author_group"
+  protocols: [resplit]
+  methods: [M0, M1, M3, M3-mix, M5, B1]
+  ensemble_methods: []
+  group_types: []
+  jitter_runs: []
+
+# SDCNL has no domains.
+lodo: null

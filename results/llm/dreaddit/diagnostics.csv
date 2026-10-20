@@ -1,0 +1,118 @@
+section,scope,key,value
+runs,gemma_s_tok_P1,model_name,mlx-community/gemma-4-e4b-it-OptiQ-4bit
+runs,gemma_s_tok_P1,conditions,"['clean', 'head_75', 'head_50', 'head_25', 'tail_75', 'tail_50', 'tail_25', 'del_15', 'del_30', 'typo_05', 'typo_10']"
+runs,gemma_s_tok_P1,unparsed_rows,0
+runs,gemma_s_tok_P1,excluded_pool_ids,0
+runs,gemma_s_tok_P1,excluded_validation_rows,0
+runs,gemma_s_tok_P1,distinct_score_share_clean,1.0
+runs,gemma_s_tok_P1,exact_0_or_1_share_clean,0.0
+runs,gemma_s_tok_P1,validation_nll_temperature,7.1476
+runs,gemma_s_tok_P1,ks_pvalue,0.1326
+runs,gemma_s_tok_P2,model_name,mlx-community/gemma-4-e4b-it-OptiQ-4bit
+runs,gemma_s_tok_P2,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gemma_s_tok_P2,unparsed_rows,0
+runs,gemma_s_tok_P2,excluded_pool_ids,0
+runs,gemma_s_tok_P2,excluded_validation_rows,0
+runs,gemma_s_tok_P2,distinct_score_share_clean,1.0
+runs,gemma_s_tok_P2,exact_0_or_1_share_clean,0.0
+runs,gemma_s_tok_P2,validation_nll_temperature,9.1272
+runs,gemma_s_tok_P2,ks_pvalue,0.2533
+runs,gemma_s_tok_P3,model_name,mlx-community/gemma-4-e4b-it-OptiQ-4bit
+runs,gemma_s_tok_P3,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gemma_s_tok_P3,unparsed_rows,0
+runs,gemma_s_tok_P3,excluded_pool_ids,0
+runs,gemma_s_tok_P3,excluded_validation_rows,0
+runs,gemma_s_tok_P3,distinct_score_share_clean,1.0
+runs,gemma_s_tok_P3,exact_0_or_1_share_clean,0.0
+runs,gemma_s_tok_P3,validation_nll_temperature,5.1683
+runs,gemma_s_tok_P3,ks_pvalue,0.081
+runs,gemma_s_verb_P1,model_name,mlx-community/gemma-4-e4b-it-OptiQ-4bit
+runs,gemma_s_verb_P1,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gemma_s_verb_P1,unparsed_rows,0
+runs,gemma_s_verb_P1,excluded_pool_ids,0
+runs,gemma_s_verb_P1,excluded_validation_rows,0
+runs,gemma_s_verb_P1,distinct_score_share_clean,0.011307
+runs,gemma_s_verb_P1,exact_0_or_1_share_clean,0.044523
+runs,gemma_s_verb_P1,validation_nll_temperature,1.2213
+runs,gemma_s_verb_P1,ks_pvalue,0.3399
+runs,gpt_s_cons_P1,model_name,gpt-4.1-mini-2025-04-14
+runs,gpt_s_cons_P1,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gpt_s_cons_P1,unparsed_rows,0
+runs,gpt_s_cons_P1,excluded_pool_ids,0
+runs,gpt_s_cons_P1,excluded_validation_rows,0
+runs,gpt_s_cons_P1,distinct_score_share_clean,0.007774
+runs,gpt_s_cons_P1,exact_0_or_1_share_clean,0.964664
+runs,gpt_s_cons_P1,validation_nll_temperature,15.6824
+runs,gpt_s_cons_P1,ks_pvalue,0.5635
+runs,gpt_s_tok_P1,model_name,gpt-4.1-mini-2025-04-14
+runs,gpt_s_tok_P1,conditions,"['clean', 'head_75', 'head_50', 'head_25', 'tail_75', 'tail_50', 'tail_25', 'del_15', 'del_30', 'typo_05', 'typo_10']"
+runs,gpt_s_tok_P1,unparsed_rows,0
+runs,gpt_s_tok_P1,excluded_pool_ids,0
+runs,gpt_s_tok_P1,excluded_validation_rows,0
+runs,gpt_s_tok_P1,distinct_score_share_clean,0.809894
+runs,gpt_s_tok_P1,exact_0_or_1_share_clean,0.0
+runs,gpt_s_tok_P1,validation_nll_temperature,13.1396
+runs,gpt_s_tok_P1,ks_pvalue,0.3656
+runs,gpt_s_tok_P2,model_name,gpt-4.1-mini-2025-04-14
+runs,gpt_s_tok_P2,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gpt_s_tok_P2,unparsed_rows,0
+runs,gpt_s_tok_P2,excluded_pool_ids,0
+runs,gpt_s_tok_P2,excluded_validation_rows,0
+runs,gpt_s_tok_P2,distinct_score_share_clean,0.802827
+runs,gpt_s_tok_P2,exact_0_or_1_share_clean,0.0
+runs,gpt_s_tok_P2,validation_nll_temperature,17.6172
+runs,gpt_s_tok_P2,ks_pvalue,0.1564
+runs,gpt_s_tok_P3,model_name,gpt-4.1-mini-2025-04-14
+runs,gpt_s_tok_P3,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gpt_s_tok_P3,unparsed_rows,0
+runs,gpt_s_tok_P3,excluded_pool_ids,0
+runs,gpt_s_tok_P3,excluded_validation_rows,0
+runs,gpt_s_tok_P3,distinct_score_share_clean,0.913781
+runs,gpt_s_tok_P3,exact_0_or_1_share_clean,0.0
+runs,gpt_s_tok_P3,validation_nll_temperature,12.1156
+runs,gpt_s_tok_P3,ks_pvalue,0.1082
+runs,gpt_s_verb_P1,model_name,gpt-4.1-mini-2025-04-14
+runs,gpt_s_verb_P1,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,gpt_s_verb_P1,unparsed_rows,0
+runs,gpt_s_verb_P1,excluded_pool_ids,0
+runs,gpt_s_verb_P1,excluded_validation_rows,0
+runs,gpt_s_verb_P1,distinct_score_share_clean,0.009187
+runs,gpt_s_verb_P1,exact_0_or_1_share_clean,0.00636
+runs,gpt_s_verb_P1,validation_nll_temperature,1.4226
+runs,gpt_s_verb_P1,ks_pvalue,0.3089
+runs,qwen_s_tok_P1,model_name,mlx-community/Qwen3-4B-Instruct-2507-4bit
+runs,qwen_s_tok_P1,conditions,"['clean', 'head_75', 'head_50', 'head_25', 'tail_75', 'tail_50', 'tail_25', 'del_15', 'del_30', 'typo_05', 'typo_10']"
+runs,qwen_s_tok_P1,unparsed_rows,0
+runs,qwen_s_tok_P1,excluded_pool_ids,0
+runs,qwen_s_tok_P1,excluded_validation_rows,0
+runs,qwen_s_tok_P1,distinct_score_share_clean,0.299647
+runs,qwen_s_tok_P1,exact_0_or_1_share_clean,0.0
+runs,qwen_s_tok_P1,validation_nll_temperature,17.9952
+runs,qwen_s_tok_P1,ks_pvalue,0.3494
+runs,qwen_s_tok_P2,model_name,mlx-community/Qwen3-4B-Instruct-2507-4bit
+runs,qwen_s_tok_P2,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,qwen_s_tok_P2,unparsed_rows,0
+runs,qwen_s_tok_P2,excluded_pool_ids,0
+runs,qwen_s_tok_P2,excluded_validation_rows,0
+runs,qwen_s_tok_P2,distinct_score_share_clean,0.216961
+runs,qwen_s_tok_P2,exact_0_or_1_share_clean,0.0
+runs,qwen_s_tok_P2,validation_nll_temperature,20.0854
+runs,qwen_s_tok_P2,ks_pvalue,0.3394
+runs,qwen_s_tok_P3,model_name,mlx-community/Qwen3-4B-Instruct-2507-4bit
+runs,qwen_s_tok_P3,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,qwen_s_tok_P3,unparsed_rows,0
+runs,qwen_s_tok_P3,excluded_pool_ids,0
+runs,qwen_s_tok_P3,excluded_validation_rows,0
+runs,qwen_s_tok_P3,distinct_score_share_clean,0.343463
+runs,qwen_s_tok_P3,exact_0_or_1_share_clean,0.0
+runs,qwen_s_tok_P3,validation_nll_temperature,15.948
+runs,qwen_s_tok_P3,ks_pvalue,0.7757
+runs,qwen_s_verb_P1,model_name,mlx-community/Qwen3-4B-Instruct-2507-4bit
+runs,qwen_s_verb_P1,conditions,"['clean', 'head_25', 'tail_25', 'del_30']"
+runs,qwen_s_verb_P1,unparsed_rows,0
+runs,qwen_s_verb_P1,excluded_pool_ids,0
+runs,qwen_s_verb_P1,excluded_validation_rows,0
+runs,qwen_s_verb_P1,distinct_score_share_clean,0.012014
+runs,qwen_s_verb_P1,exact_0_or_1_share_clean,0.15689
+runs,qwen_s_verb_P1,validation_nll_temperature,4.9519
+runs,qwen_s_verb_P1,ks_pvalue,0.6066

@@ -1,0 +1,4 @@
+label,scope,n_runs,spearman_slack_vs_difference_median
+exploratory_post_hoc,dreaddit,19,-0.9719055545642682
+exploratory_post_hoc,sdcnl,7,-0.9642857142857145
+exploratory_post_hoc,overall,26,-0.9491876868972042

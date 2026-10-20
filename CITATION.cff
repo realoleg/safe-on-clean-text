@@ -1,0 +1,154 @@
+cff-version: 1.2.0
+message: "If you use this code or its results, please cite it as below, and cite the datasets, models and methods it builds on (references)."
+title: "Safe on Clean Text: How Conformal Mental-Health Screening Fails Quietly"
+type: software
+authors:
+  - alias: realoleg
+repository-code: "https://github.com/realoleg/safe-on-clean-text"
+license: MIT
+references:
+  - type: conference-paper
+    title: "Dreaddit: A Reddit Dataset for Stress Analysis in Social Media"
+    authors:
+      - family-names: Turcan
+        given-names: Elsbeth
+      - family-names: McKeown
+        given-names: Kathleen
+    year: 2019
+    collection-title: "Proceedings of the Tenth International Workshop on Health Text Mining and Information Analysis (LOUHI 2019)"
+    start: 97
+    end: 107
+  - type: conference-paper
+    title: "Deep Learning for Suicide and Depression Identification with Unsupervised Label Correction"
+    authors:
+      - family-names: Haque
+        given-names: Ayaan
+      - family-names: Reddi
+        given-names: Viraaj
+      - family-names: Giallanza
+        given-names: Tyler
+    year: 2021
+    collection-title: "Artificial Neural Networks and Machine Learning – ICANN 2021"
+  - type: conference-paper
+    title: "MentalBERT: Publicly Available Pretrained Language Models for Mental Healthcare"
+    authors:
+      - family-names: Ji
+        given-names: Shaoxiong
+      - family-names: Zhang
+        given-names: Tianlin
+      - family-names: Ansari
+        given-names: Luna
+      - family-names: Fu
+        given-names: Jie
+      - family-names: Tiwari
+        given-names: Prayag
+      - family-names: Cambria
+        given-names: Erik
+    year: 2022
+    collection-title: "Proceedings of the Thirteenth Language Resources and Evaluation Conference (LREC 2022)"
+  - type: article
+    title: "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter"
+    authors:
+      - family-names: Sanh
+        given-names: Victor
+      - family-names: Debut
+        given-names: Lysandre
+      - family-names: Chaumond
+        given-names: Julien
+      - family-names: Wolf
+        given-names: Thomas
+    year: 2019
+    journal: "arXiv preprint arXiv:1910.01108"
+    url: "https://arxiv.org/abs/1910.01108"
+  - type: article
+    title: "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
+    authors:
+      - family-names: Liu
+        given-names: Yinhan
+      - family-names: Ott
+        given-names: Myle
+      - family-names: Goyal
+        given-names: Naman
+      - family-names: Du
+        given-names: Jingfei
+      - family-names: Joshi
+        given-names: Mandar
+      - family-names: Chen
+        given-names: Danqi
+      - family-names: Levy
+        given-names: Omer
+      - family-names: Lewis
+        given-names: Mike
+      - family-names: Zettlemoyer
+        given-names: Luke
+      - family-names: Stoyanov
+        given-names: Veselin
+    year: 2019
+    journal: "arXiv preprint arXiv:1907.11692"
+    url: "https://arxiv.org/abs/1907.11692"
+  - type: article
+    title: "Qwen3 Technical Report"
+    authors:
+      - name: "Qwen Team"
+    year: 2025
+    journal: "arXiv preprint arXiv:2505.09388"
+    url: "https://arxiv.org/abs/2505.09388"
+    notes: "Model used: Qwen3-4B-Instruct-2507, 4-bit MLX conversion mlx-community/Qwen3-4B-Instruct-2507-4bit."
+  - type: article
+    title: "Gemma 4 Technical Report"
+    authors:
+      - name: "Gemma Team"
+    year: 2026
+    journal: "arXiv preprint arXiv:2607.02770"
+    url: "https://arxiv.org/abs/2607.02770"
+    notes: "Model used: Gemma 4 E4B instruction-tuned, 4-bit MLX conversion mlx-community/gemma-4-e4b-it-OptiQ-4bit."
+  - type: software
+    title: "GPT-4.1 mini"
+    authors:
+      - name: "OpenAI"
+    year: 2025
+    version: "gpt-4.1-mini-2025-04-14"
+  - type: article
+    title: "Least Ambiguous Set-Valued Classifiers With Bounded Error Levels"
+    authors:
+      - family-names: Sadinle
+        given-names: Mauricio
+      - family-names: Lei
+        given-names: Jing
+      - family-names: Wasserman
+        given-names: Larry
+    year: 2019
+    journal: "Journal of the American Statistical Association"
+    volume: 114
+    issue: 525
+    start: 223
+    end: 234
+  - type: conference-paper
+    title: "Conditional validity of inductive conformal predictors"
+    authors:
+      - family-names: Vovk
+        given-names: Vladimir
+    year: 2012
+    collection-title: "Proceedings of the Asian Conference on Machine Learning (ACML 2012), PMLR 25"
+  - type: conference-paper
+    title: "Distribution-free uncertainty quantification for classification under label shift"
+    authors:
+      - family-names: Podkopaev
+        given-names: Aleksandr
+      - family-names: Ramdas
+        given-names: Aaditya
+    year: 2021
+    collection-title: "Proceedings of the Thirty-Seventh Conference on Uncertainty in Artificial Intelligence (UAI 2021), PMLR 161"
+  - type: conference-paper
+    title: "On Calibration of Modern Neural Networks"
+    authors:
+      - family-names: Guo
+        given-names: Chuan
+      - family-names: Pleiss
+        given-names: Geoff
+      - family-names: Sun
+        given-names: Yu
+      - family-names: Weinberger
+        given-names: Kilian Q.
+    year: 2017
+    collection-title: "Proceedings of the 34th International Conference on Machine Learning (ICML 2017), PMLR 70"

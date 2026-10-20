@@ -1,0 +1,35 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  checks:
+    # Apple silicon: the platform the study was run on (MLX, MPS torch).
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Install
+        run: uv sync --frozen
+      - name: Lint
+        run: uv run ruff check src tests
+      - name: Format
+        run: uv run ruff format --check src tests
+      - name: Prepare the data
+        run: uv run safe-on-clean-text prepare
+      - name: Prepared data match the committed manifests and reports
+        run: git diff --exit-code -- data
+      - name: Tests
+        run: uv run pytest
+      - name: Data preparation test
+        run: uv run pytest -m network
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Install
+        run: uv sync --frozen
+      - name: Tests
+        run: uv run pytest

@@ -1,0 +1,48 @@
+{
+  "dataset": "sdcnl",
+  "model": "qwen_s_tok_P1",
+  "llm": "qwen",
+  "model_name": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+  "method": "s_tok",
+  "prompt": "P1",
+  "seed": "P1",
+  "answer_prefix": "",
+  "conditions": [
+    "clean",
+    "head_75",
+    "head_50",
+    "head_25",
+    "tail_75",
+    "tail_50",
+    "tail_25",
+    "del_15",
+    "del_30",
+    "typo_05",
+    "typo_10"
+  ],
+  "n_rows": {
+    "validation": 182,
+    "calibration": 3971,
+    "test": 4004
+  },
+  "unparsed_rows": 0,
+  "excluded_pool_ids": 0,
+  "excluded_validation_rows": 0,
+  "distinct_score_share_clean": 0.54069,
+  "exact_0_or_1_share_clean": 0.0,
+  "cache": "results/llm/sdcnl/cache/qwen/s_tok.jsonl.gz",
+  "commit": "053ab4d568a6e56491c24325d4a79e3c6c404449",
+  "exported_at": "2026-10-07T05:12:17+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  }
+}

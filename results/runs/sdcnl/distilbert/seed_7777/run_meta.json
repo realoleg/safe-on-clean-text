@@ -1,0 +1,193 @@
+{
+  "dataset": "sdcnl",
+  "model": "distilbert",
+  "model_name": "distilbert-base-uncased",
+  "seed": 7777,
+  "lodo_domain": null,
+  "commit": "850d4de996a7da9a537a242b805a766877364995",
+  "device": "mps",
+  "batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "effective_batch_size": 16,
+  "batch_mode": "8x2",
+  "oom_fallback": true,
+  "pad_to_multiple_of": 64,
+  "torch_empty_cache_steps": 10,
+  "conditions": [
+    "clean",
+    "head_75",
+    "head_50",
+    "head_25",
+    "tail_75",
+    "tail_50",
+    "tail_25",
+    "del_15",
+    "del_30",
+    "typo_05",
+    "typo_10"
+  ],
+  "occlusion": false,
+  "n_rows": {
+    "train": 915,
+    "calibration": 361,
+    "validation": 182,
+    "test": 364
+  },
+  "clean_metrics": {
+    "validation": {
+      "accuracy": 0.7252747252747253,
+      "precision": 0.6909090909090909,
+      "recall": 0.8260869565217391,
+      "f1": 0.7524752475247525,
+      "macro_f1": 0.7219166361080552
+    },
+    "calibration": {
+      "accuracy": 0.7368421052631579,
+      "precision": 0.7067307692307693,
+      "recall": 0.8121546961325967,
+      "f1": 0.7557840616966581,
+      "macro_f1": 0.7352493882056864
+    },
+    "test": {
+      "accuracy": 0.6978021978021978,
+      "precision": 0.6842105263157895,
+      "recall": 0.7222222222222222,
+      "f1": 0.7027027027027027,
+      "macro_f1": 0.6977200664351503
+    }
+  },
+  "best_epoch": 2.0,
+  "best_checkpoint_check": {
+    "best_checkpoint": "checkpoint-116",
+    "legacy_layer_norm_tensors_in_file": 2,
+    "tensors_different_before_reload": 2,
+    "loading_missing_keys": 0,
+    "loading_unexpected_keys": 0,
+    "loading_mismatched_keys": 0,
+    "missing_keys": 0,
+    "unexpected_keys": 0,
+    "tensors_compared": 104,
+    "tensors_different": 0,
+    "passed": true
+  },
+  "validation_macro_f1_check": {
+    "best_logged": 0.7219166361080552,
+    "final_model": 0.7219166361080552,
+    "equal": true
+  },
+  "degenerate": false,
+  "degenerate_threshold_validation_macro_f1": 0.5,
+  "peak_mps_driver_gb": 9.7,
+  "train_steps": 174,
+  "train_seconds_per_step": 1.344,
+  "train_seconds": 233.8,
+  "epoch_seconds": [
+    73.5,
+    72.1,
+    72.2
+  ],
+  "total_seconds": 321.8,
+  "started_at": "2026-10-07T02:27:51+04:00",
+  "finished_at": "2026-10-07T02:33:13+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  },
+  "config": {
+    "data": {
+      "name": "sdcnl",
+      "dataset_name": "asmaab/dreaddit",
+      "output_dir": "data/processed/sdcnl",
+      "split": {
+        "n_splits": 20,
+        "train_folds": [
+          0,
+          9
+        ],
+        "validation_folds": [
+          10,
+          11
+        ],
+        "calibration_folds": [
+          12,
+          15
+        ],
+        "random_state": 42,
+        "min_calibration_rows": 650,
+        "min_calibration_rows_per_class": 300,
+        "test_folds": [
+          16,
+          19
+        ],
+        "min_rows": 340,
+        "min_rows_per_class": 150
+      },
+      "source_url": "https://raw.githubusercontent.com/ayaanzhaque/SDCNL/ddf995aabd028657385cac6cee92c5d53774992d/data/combined-set.csv",
+      "source_sha256": "8f00c4e55fbde15cd4caba729568d3036ed7b6e438b273e39b1e4d02da18b011",
+      "raw_path": "data/raw/sdcnl_combined-set.csv",
+      "max_words": 300
+    },
+    "encoders": {
+      "models": {
+        "distilbert": "distilbert-base-uncased",
+        "roberta": "roberta-base",
+        "mentalroberta": "mental/mental-roberta-base"
+      },
+      "seeds": [
+        13,
+        42,
+        101,
+        2024,
+        7777
+      ],
+      "max_length": 512,
+      "batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "batch_overrides": {
+        "roberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        },
+        "mentalroberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        },
+        "distilbert": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        }
+      },
+      "torch_empty_cache_steps": 10,
+      "pad_to_multiple_of": 64,
+      "learning_rate": 2e-05,
+      "num_train_epochs": 3,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "occlusion_models": [
+        "distilbert",
+        "roberta"
+      ]
+    },
+    "conditions": [
+      "clean",
+      "head_75",
+      "head_50",
+      "head_25",
+      "tail_75",
+      "tail_50",
+      "tail_25",
+      "del_15",
+      "del_30",
+      "typo_05",
+      "typo_10"
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "dataset": "dreaddit",
+  "model": "roberta",
+  "model_name": "roberta-base",
+  "seed": 42,
+  "commit": "274a76a7612cd4472e2b0d8d2ace072e9900fe7b",
+  "device": "mps",
+  "batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "effective_batch_size": 16,
+  "batch_mode": "8x2",
+  "oom_fallback": true,
+  "pad_to_multiple_of": 64,
+  "torch_empty_cache_steps": 10,
+  "conditions": [
+    "clean",
+    "head_75",
+    "head_50",
+    "head_25",
+    "tail_75",
+    "tail_50",
+    "tail_25",
+    "del_15",
+    "del_30",
+    "typo_05",
+    "typo_10"
+  ],
+  "occlusion": true,
+  "n_rows": {
+    "train": 1692,
+    "calibration": 700,
+    "validation": 422,
+    "test": 715
+  },
+  "clean_metrics": {
+    "validation": {
+      "accuracy": 0.8246445497630331,
+      "precision": 0.8394495412844036,
+      "recall": 0.8243243243243243,
+      "f1": 0.8318181818181818,
+      "macro_f1": 0.8243249324932493
+    },
+    "calibration": {
+      "accuracy": 0.8414285714285714,
+      "precision": 0.8587257617728532,
+      "recall": 0.8378378378378378,
+      "f1": 0.8481532147742818,
+      "macro_f1": 0.8411169661315355
+    },
+    "test": {
+      "accuracy": 0.8181818181818182,
+      "precision": 0.8203753351206434,
+      "recall": 0.8292682926829268,
+      "f1": 0.8247978436657682,
+      "macro_f1": 0.8179221776468376
+    }
+  },
+  "best_epoch": 3.0,
+  "best_checkpoint_check": {
+    "best_checkpoint": "checkpoint-318",
+    "legacy_layer_norm_tensors_in_file": 50,
+    "tensors_different_before_reload": 0,
+    "loading_missing_keys": 0,
+    "loading_unexpected_keys": 0,
+    "loading_mismatched_keys": 0,
+    "missing_keys": 0,
+    "unexpected_keys": 0,
+    "tensors_compared": 201,
+    "tensors_different": 0,
+    "passed": true
+  },
+  "validation_macro_f1_check": {
+    "best_logged": 0.8243249324932493,
+    "final_model": 0.8243249324932493,
+    "equal": true
+  },
+  "degenerate": false,
+  "degenerate_threshold_validation_macro_f1": 0.5,
+  "peak_mps_driver_gb": 10.17,
+  "train_steps": 318,
+  "train_seconds_per_step": 1.368,
+  "train_seconds": 435.0,
+  "epoch_seconds": [
+    135.2,
+    133.5,
+    133.1
+  ],
+  "total_seconds": 704.2,
+  "started_at": "2026-10-05T16:34:53+04:00",
+  "finished_at": "2026-10-05T16:46:37+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  },
+  "config": {
+    "data": {
+      "name": "dreaddit",
+      "dataset_name": "asmaab/dreaddit",
+      "output_dir": "data/processed",
+      "split": {
+        "n_splits": 20,
+        "train_folds": [
+          0,
+          11
+        ],
+        "validation_folds": [
+          12,
+          14
+        ],
+        "calibration_folds": [
+          15,
+          19
+        ],
+        "random_state": 42,
+        "min_calibration_rows": 650,
+        "min_calibration_rows_per_class": 300
+      }
+    },
+    "encoders": {
+      "models": {
+        "distilbert": "distilbert-base-uncased",
+        "roberta": "roberta-base",
+        "mentalroberta": "mental/mental-roberta-base"
+      },
+      "seeds": [
+        13,
+        42,
+        101,
+        2024,
+        7777
+      ],
+      "max_length": 512,
+      "batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "batch_overrides": {
+        "roberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        },
+        "mentalroberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        }
+      },
+      "torch_empty_cache_steps": 10,
+      "pad_to_multiple_of": 64,
+      "learning_rate": 2e-05,
+      "num_train_epochs": 3,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "occlusion_models": [
+        "distilbert",
+        "roberta"
+      ]
+    },
+    "conditions": [
+      "clean",
+      "head_75",
+      "head_50",
+      "head_25",
+      "tail_75",
+      "tail_50",
+      "tail_25",
+      "del_15",
+      "del_30",
+      "typo_05",
+      "typo_10"
+    ]
+  }
+}

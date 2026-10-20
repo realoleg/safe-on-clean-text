@@ -1,0 +1,35 @@
+hypothesis,scope,quantity,criterion,value,margin,meets,seed_spread_min_max_of_medians
+H11,tfidf_logreg,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.8919 [0.8143, 0.9518]",-0.07939189189189189,False,
+H11,distilbert,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.9227 [0.8743, 0.9624]",-0.11016666666666663,False,0.9136 – 0.9341
+H11,roberta,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.9084 [0.8581, 0.9535]",-0.09593373493975899,False,0.8919 – 0.9200
+H11,mentalroberta,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.9013 [0.8519, 0.9457]",-0.08883333333333332,False,0.8750 – 0.9177
+H11,qwen_s_tok_P1,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.8125 [0.7215, 0.8767]",0.0,False,
+H11,gemma_s_tok_P1,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.8916 [0.8222, 0.9488]",-0.07906626506024095,False,
+H11,gpt_s_tok_P1,"short posts M1 median c1 [2.5%, 97.5%]","< band low (band [0.8125, 0.9750])","0.8077 [0.7200, 0.8801]",0.004807692307692291,True,
+H11,tally,models meeting,>= 4 of 7,1 of 7,-3.0,False,
+H11,verdict,confirmed,>= 4 of 7,False,,False,
+H12,tfidf_logreg,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.8524 [0.8032, 0.8921]",,,
+H12,tfidf_logreg,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.0395; 0.0081,-0.03140958634379676,False,
+H12,distilbert,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.7861 [0.7370, 0.8282]",,,0.7782 – 0.7974
+H12,distilbert,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.1365; 0.0227,-0.11386415703426012,False,
+H12,roberta,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.7951 [0.7496, 0.8366]",,,0.7826 – 0.8113
+H12,roberta,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.1134; 0.0084,-0.10492075523341804,False,
+H12,mentalroberta,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.8057 [0.7592, 0.8536]",,,0.7845 – 0.8223
+H12,mentalroberta,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.0957; 0.0013,-0.09432353632080026,False,
+H12,qwen_s_tok_P1,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.7284 [0.6573, 0.7977]",,,
+H12,qwen_s_tok_P1,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.0841; 0.0875,-0.03411838256926773,False,
+H12,gemma_s_tok_P1,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.7746 [0.7192, 0.8242]",,,
+H12,gemma_s_tok_P1,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.1170; 0.0084,-0.10855279819647201,False,
+H12,gpt_s_tok_P1,"predicted M1 c1, median [2.5%, 97.5%] (observed in H11)",,"0.7622 [0.6898, 0.8184]",,,
+H12,gpt_s_tok_P1,|predicted - observed| median c1; |0.90 - observed|,<= 0.05 and < naive,0.0455; 0.0923,0.004543701912122902,True,
+H12,tally,models meeting,>= 4 of 7,1 of 7,-3.0,False,
+H12,verdict,confirmed,>= 4 of 7,False,,False,
+H13,tfidf_logreg,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9512 [0.8800, 0.9880]",0.02378048780487807,True,
+H13,distilbert,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9688 [0.9309, 0.9949]",0.006168831168831046,True,0.9625 – 0.9750
+H13,roberta,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9586 [0.9065, 0.9889]",0.01642136248948689,True,0.9494 – 0.9701
+H13,mentalroberta,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9407 [0.8907, 0.9784]",0.03425925925925932,True,0.9317 – 0.9551
+H13,qwen_s_tok_P1,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9302 [0.8481, 0.9750]",0.04476744186046511,True,
+H13,gemma_s_tok_P1,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9432 [0.8846, 0.9853]",0.031818181818181746,True,
+H13,gpt_s_tok_P1,"short posts M3-mix median c1 [2.5%, 97.5%]","in band [0.8125, 0.9750]","0.9444 [0.8513, 0.9872]",0.030555555555555558,True,
+H13,tally,models meeting,>= 4 of 7,7 of 7,3.0,True,
+H13,verdict,confirmed,>= 4 of 7,True,,True,

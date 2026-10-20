@@ -1,0 +1,14 @@
+section,scope,key,value
+volume,plan,s_tok_examples,8157
+volume,plan,s_verb_examples,0
+volume,plan,s_cons_examples,0
+check,qwen/s_tok/prefix='',n,50
+check,qwen/s_tok/prefix='',accuracy_at_0.5,0.6
+check,qwen/s_tok/prefix='',seconds_per_example,1.5279
+check,qwen/s_tok/prefix='',mean_mass,1.0
+check,qwen/s_tok/prefix='',min_mass,1.0
+check,qwen/s_tok/prefix='',mean_prompt_tokens,245.7
+decision,qwen,s_tok_answer_prefix,
+decision,qwen,s_tok_mass_ok,True
+estimate,qwen/s_tok,full_volume_hours_sequential,3.46
+calls,qwen,model_calls_this_run,50

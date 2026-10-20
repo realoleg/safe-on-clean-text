@@ -1,0 +1,80 @@
+{
+  "epoch_seconds": [
+    73.3,
+    74.2,
+    72.9
+  ],
+  "best_epoch": 2.0,
+  "best_validation_macro_f1": 0.7178637648560746,
+  "log_history": [
+    {
+      "loss": 1.3592846311371902,
+      "grad_norm": 1.675636887550354,
+      "learning_rate": 1.5000000000000002e-05,
+      "epoch": 1.0,
+      "step": 58
+    },
+    {
+      "eval_loss": 0.6586477160453796,
+      "eval_accuracy": 0.6263736263736264,
+      "eval_precision": 0.6818181818181818,
+      "eval_recall": 0.4891304347826087,
+      "eval_f1": 0.569620253164557,
+      "eval_macro_f1": 0.6197615828929581,
+      "eval_runtime": 4.2437,
+      "eval_samples_per_second": 42.887,
+      "eval_steps_per_second": 5.42,
+      "epoch": 1.0,
+      "step": 58
+    },
+    {
+      "loss": 1.1243400573730469,
+      "grad_norm": 8.644551277160645,
+      "learning_rate": 7.564102564102564e-06,
+      "epoch": 2.0,
+      "step": 116
+    },
+    {
+      "eval_loss": 0.5701109766960144,
+      "eval_accuracy": 0.7197802197802198,
+      "eval_precision": 0.6952380952380952,
+      "eval_recall": 0.7934782608695652,
+      "eval_f1": 0.7411167512690355,
+      "eval_macro_f1": 0.7178637648560746,
+      "eval_runtime": 4.1833,
+      "eval_samples_per_second": 43.506,
+      "eval_steps_per_second": 5.498,
+      "epoch": 2.0,
+      "step": 116
+    },
+    {
+      "loss": 0.891149981268521,
+      "grad_norm": 8.070158004760742,
+      "learning_rate": 1.282051282051282e-07,
+      "epoch": 3.0,
+      "step": 174
+    },
+    {
+      "eval_loss": 0.5760127305984497,
+      "eval_accuracy": 0.7142857142857143,
+      "eval_precision": 0.6785714285714286,
+      "eval_recall": 0.8260869565217391,
+      "eval_f1": 0.7450980392156863,
+      "eval_macro_f1": 0.7100490196078432,
+      "eval_runtime": 4.1909,
+      "eval_samples_per_second": 43.427,
+      "eval_steps_per_second": 5.488,
+      "epoch": 3.0,
+      "step": 174
+    },
+    {
+      "train_runtime": 235.9723,
+      "train_samples_per_second": 11.633,
+      "train_steps_per_second": 0.737,
+      "total_flos": 273661087198464.0,
+      "train_loss": 1.1249248899262527,
+      "epoch": 3.0,
+      "step": 174
+    }
+  ]
+}

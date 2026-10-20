@@ -1,0 +1,129 @@
+{
+  "dataset": "sdcnl",
+  "model": "tfidf_linear_svm",
+  "seed": 42,
+  "commit": "053ab4d568a6e56491c24325d4a79e3c6c404449",
+  "svm_c": 1.0,
+  "in_conformal": false,
+  "vocabulary_size": 20000,
+  "conditions": [
+    "clean",
+    "head_75",
+    "head_50",
+    "head_25",
+    "tail_75",
+    "tail_50",
+    "tail_25",
+    "del_15",
+    "del_30",
+    "typo_05",
+    "typo_10"
+  ],
+  "n_rows": {
+    "train": 915,
+    "validation": 182,
+    "calibration": 361,
+    "test": 364
+  },
+  "clean_metrics": {
+    "validation": {
+      "accuracy": 0.6263736263736264,
+      "precision": 0.62,
+      "recall": 0.6739130434782609,
+      "f1": 0.6458333333333334,
+      "macro_f1": 0.6252422480620154
+    },
+    "calibration": {
+      "accuracy": 0.7368421052631579,
+      "precision": 0.7471264367816092,
+      "recall": 0.7182320441988951,
+      "f1": 0.7323943661971831,
+      "macro_f1": 0.7367693901830602
+    },
+    "test": {
+      "accuracy": 0.6895604395604396,
+      "precision": 0.6871508379888268,
+      "recall": 0.6833333333333333,
+      "f1": 0.6852367688022284,
+      "macro_f1": 0.6895018532358026
+    }
+  },
+  "total_seconds": 2.3,
+  "started_at": "2026-10-07T05:12:11+04:00",
+  "finished_at": "2026-10-07T05:12:13+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  },
+  "config": {
+    "seed": 42,
+    "data": {
+      "name": "sdcnl",
+      "dataset_name": "asmaab/dreaddit",
+      "output_dir": "data/processed/sdcnl",
+      "split": {
+        "n_splits": 20,
+        "train_folds": [
+          0,
+          9
+        ],
+        "validation_folds": [
+          10,
+          11
+        ],
+        "calibration_folds": [
+          12,
+          15
+        ],
+        "random_state": 42,
+        "min_calibration_rows": 650,
+        "min_calibration_rows_per_class": 300,
+        "test_folds": [
+          16,
+          19
+        ],
+        "min_rows": 340,
+        "min_rows_per_class": 150
+      },
+      "source_url": "https://raw.githubusercontent.com/ayaanzhaque/SDCNL/ddf995aabd028657385cac6cee92c5d53774992d/data/combined-set.csv",
+      "source_sha256": "8f00c4e55fbde15cd4caba729568d3036ed7b6e438b273e39b1e4d02da18b011",
+      "raw_path": "data/raw/sdcnl_combined-set.csv",
+      "max_words": 300
+    },
+    "baselines": {
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "logreg_c_grid": [
+        0.1,
+        0.3,
+        1,
+        3,
+        10
+      ]
+    },
+    "conditions": [
+      "clean",
+      "head_75",
+      "head_50",
+      "head_25",
+      "tail_75",
+      "tail_50",
+      "tail_25",
+      "del_15",
+      "del_30",
+      "typo_05",
+      "typo_10"
+    ]
+  }
+}

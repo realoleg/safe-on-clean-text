@@ -1,0 +1,8 @@
+hypothesis,scope,quantity,criterion,value_primary,meets_primary,value_sensitivity_pooled,meets_sensitivity_pooled
+H2,tally,models meeting (H2a),>= 4,3 of 7,False,4 of 7,True
+H3b,tally,models meeting (H3b),>= 4,7 of 7,True,4 of 7,True
+R1,tally,models meeting (R1),>= 2,2 of 3,True,1 of 3,False
+R3b,tally,models meeting (R3b),>= 2,2 of 3,True,1 of 3,False
+H2,verdict,confirmed,M0 part and M1 part each >= 4,False,False,True,True
+R1,verdict,confirmed,majority >= 2,True,True,False,False
+R3b,verdict,confirmed,majority >= 2,True,True,False,False

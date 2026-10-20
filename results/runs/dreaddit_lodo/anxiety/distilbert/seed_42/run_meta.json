@@ -1,0 +1,159 @@
+{
+  "dataset": "dreaddit",
+  "model": "distilbert",
+  "model_name": "distilbert-base-uncased",
+  "seed": 42,
+  "lodo_domain": "anxiety",
+  "commit": "09e2f3562c5812979cfeadf087490cf577c91e4c",
+  "device": "mps",
+  "batch_size": 16,
+  "gradient_accumulation_steps": 1,
+  "effective_batch_size": 16,
+  "batch_mode": "16x1",
+  "oom_fallback": false,
+  "pad_to_multiple_of": 64,
+  "torch_empty_cache_steps": 10,
+  "conditions": [
+    "clean"
+  ],
+  "occlusion": false,
+  "n_rows": {
+    "train": 1363,
+    "calibration": 553,
+    "validation": 335,
+    "test": 161
+  },
+  "clean_metrics": {
+    "validation": {
+      "accuracy": 0.8029850746268656,
+      "precision": 0.7562189054726368,
+      "recall": 0.8994082840236687,
+      "f1": 0.8216216216216217,
+      "macro_f1": 0.8008108108108108
+    },
+    "calibration": {
+      "accuracy": 0.7775768535262206,
+      "precision": 0.7350157728706624,
+      "recall": 0.8566176470588235,
+      "f1": 0.7911714770797963,
+      "macro_f1": 0.7766302259673643
+    },
+    "test": {
+      "accuracy": 0.8198757763975155,
+      "precision": 0.7894736842105263,
+      "recall": 0.9473684210526315,
+      "f1": 0.861244019138756,
+      "macro_f1": 0.8023034254985816
+    }
+  },
+  "best_epoch": 1.0,
+  "best_checkpoint_check": {
+    "best_checkpoint": "checkpoint-86",
+    "legacy_layer_norm_tensors_in_file": 2,
+    "tensors_different_before_reload": 2,
+    "loading_missing_keys": 0,
+    "loading_unexpected_keys": 0,
+    "loading_mismatched_keys": 0,
+    "missing_keys": 0,
+    "unexpected_keys": 0,
+    "tensors_compared": 104,
+    "tensors_different": 0,
+    "passed": true
+  },
+  "validation_macro_f1_check": {
+    "best_logged": 0.8008108108108108,
+    "final_model": 0.8008108108108108,
+    "equal": true
+  },
+  "degenerate": false,
+  "degenerate_threshold_validation_macro_f1": 0.5,
+  "peak_mps_driver_gb": 9.78,
+  "train_steps": 258,
+  "train_seconds_per_step": 0.772,
+  "train_seconds": 199.3,
+  "epoch_seconds": [
+    59.2,
+    63.6,
+    59.7
+  ],
+  "total_seconds": 210.7,
+  "started_at": "2026-10-07T00:38:35+04:00",
+  "finished_at": "2026-10-07T00:42:06+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  },
+  "config": {
+    "data": {
+      "name": "dreaddit",
+      "dataset_name": "asmaab/dreaddit",
+      "output_dir": "data/processed",
+      "split": {
+        "n_splits": 20,
+        "train_folds": [
+          0,
+          11
+        ],
+        "validation_folds": [
+          12,
+          14
+        ],
+        "calibration_folds": [
+          15,
+          19
+        ],
+        "random_state": 42,
+        "min_calibration_rows": 650,
+        "min_calibration_rows_per_class": 300
+      }
+    },
+    "encoders": {
+      "models": {
+        "distilbert": "distilbert-base-uncased",
+        "roberta": "roberta-base",
+        "mentalroberta": "mental/mental-roberta-base"
+      },
+      "seeds": [
+        13,
+        42,
+        101,
+        2024,
+        7777
+      ],
+      "max_length": 512,
+      "batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "batch_overrides": {
+        "roberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        },
+        "mentalroberta": {
+          "batch_size": 8,
+          "gradient_accumulation_steps": 2
+        }
+      },
+      "torch_empty_cache_steps": 10,
+      "pad_to_multiple_of": 64,
+      "learning_rate": 2e-05,
+      "num_train_epochs": 3,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "occlusion_models": [
+        "distilbert",
+        "roberta"
+      ]
+    },
+    "conditions": [
+      "clean"
+    ]
+  }
+}

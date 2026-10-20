@@ -1,0 +1,41 @@
+{
+  "dataset": "dreaddit",
+  "model": "gemma_s_tok_P2",
+  "llm": "gemma",
+  "model_name": "mlx-community/gemma-4-e4b-it-OptiQ-4bit",
+  "method": "s_tok",
+  "prompt": "P2",
+  "seed": "P2",
+  "answer_prefix": "",
+  "conditions": [
+    "clean",
+    "head_25",
+    "tail_25",
+    "del_30"
+  ],
+  "n_rows": {
+    "validation": 422,
+    "calibration": 2800,
+    "test": 2860
+  },
+  "unparsed_rows": 0,
+  "excluded_pool_ids": 0,
+  "excluded_validation_rows": 0,
+  "distinct_score_share_clean": 1.0,
+  "exact_0_or_1_share_clean": 0.0,
+  "cache": "results/llm/cache/gemma/s_tok.jsonl.gz",
+  "commit": "7ea79c66a43db03afc9e543abebc2878eb3bc0db",
+  "exported_at": "2026-10-06T23:00:17+04:00",
+  "versions": {
+    "python": "3.11.15",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.11.0",
+    "transformers": "5.3.0",
+    "datasets": "4.8.4",
+    "accelerate": "1.13.0",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "nltk": "3.10.3"
+  }
+}

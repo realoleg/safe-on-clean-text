@@ -1,0 +1,30 @@
+item,type,output (under results/paper),source
+Figure 1: triage scheme and prevalence formula,main figure,figures/figure1_triage,safe_on_clean_text/paper/figures.py (diagram)
+"Figure 2: coverage and class coverage per model vs the band (H1, H5)",main figure,figures/figure2_class_coverage,results/evaluation/dreaddit/long/*.parquet
+"Figure 3: coverage and workload vs pi, M0 vs M1 (+ M0-LS) (H2)",main figure,figures/figure3_prevalence,results/evaluation/dreaddit/prevalence_long.parquet
+"Figure 4: c1 vs degradation strength, clean / matched / mix calibration, + workload (H3a-c)",main figure,figures/figure4_degradation_distilbert,results/evaluation/dreaddit/long/*.parquet
+"Figure 5: risk-class coverage c1 vs workload per 1,000 at pi = 0.10",main figure,figures/figure5_risk_coverage_vs_workload,results/evaluation/dreaddit/long/*.parquet
+"Mechanism figure: DistilBERT p(stress), clean / head_25 / tail_25, M0 / M1 / M3-mix",main figure,figures/figure_mechanism_distilbert,"results/evaluation/dreaddit/mechanisms/score_histograms.csv, mechanisms/raw/thresholds.parquet"
+"Schematic figure: conceptual mechanism, degraded at-risk posts fall between the M0 and M1 cut-offs",main figure,figures/figure_schematic,figures/figure_mechanism_thresholds.csv (DistilBERT M0 / M1 cut-offs); densities schematic
+Exploratory (post hoc): slack vs head_25 M1 - M0,exploratory figure + tables,figures/exploratory_slack; tables/exploratory_slack_*.csv,"results/evaluation/{dreaddit,sdcnl}/long/*.parquet"
+Exploratory (post hoc): band decomposition of the M1 - M0 risk-class coverage gap,appendix table,tables/appendix_band_decomposition.csv,"results/runs/{dreaddit,sdcnl}/*/seed_*/predictions.csv.gz, results/evaluation/{dreaddit,sdcnl}/long/*.parquet"
+Appendix: leave-one-domain-out (H4),appendix figure + table,figures/appendix_lodo; tables/appendix_lodo.csv,results/evaluation/dreaddit/lodo_long.parquet
+Appendix: annotator agreement (H6),appendix figure + tables,figures/appendix_agreement_distilbert; tables/appendix_agreement_*.csv,"results/evaluation/dreaddit/groups/*.parquet, mechanisms/raw/{auroc,regression}.parquet"
+Appendix: subreddits vs prevalence,appendix figure + table,figures/appendix_subreddits_distilbert; tables/appendix_subreddits.csv,mechanisms/raw/subreddit.parquet
+"Appendix: p(stress) distributions, other models",appendix figures,figures/appendix_mechanism_<model>,"mechanisms/score_histograms.csv, raw/thresholds.parquet"
+Appendix: sentence occlusion,appendix figure,figures/appendix_occlusion,results/evaluation/dreaddit/mechanisms/sentence_occlusion.csv
+Appendix: ECE and reliability diagrams,appendix figures + table,"figures/appendix_reliability_{dreaddit,sdcnl}; tables/appendix_reliability_bins.csv; ECE in table2",results/runs/*/*/seed_*/predictions.csv.gz
+Appendix: alpha = 0.05,appendix figures,"figures/appendix_figure2_alpha005, appendix_figure4_distilbert_alpha005; table3 (alpha column)",results/evaluation/dreaddit/long/*.parquet
+Appendix: SDCNL analogues of figures 2-4,appendix figures,"figures/appendix_sdcnl_figure{2,3,4}_*",results/evaluation/sdcnl/long/*.parquet
+Appendix: figure 4 for the other Dreaddit models,appendix figures,figures/appendix_figure4_degradation_<model>,results/evaluation/dreaddit/long/*.parquet
+"Table 1: data (sizes, balance, domains, agreement)",table,tables/table1_data.csv,"data/processed/dreaddit/{train,validation,calibration,test}.csv, data/processed/sdcnl/split_report.csv"
+"Table 2: classification (macro-F1, AUROC, Brier, NLL, ECE; median and min-max over seeds)",table,tables/table2_classification.csv,results/evaluation/dreaddit/classification.csv; SDCNL from results/runs/sdcnl/*/seed_*/predictions.csv.gz
+"Table 3: main conformal (model x method x {clean, pi = 0.10, head_25, worst in-distribution domain})",table,tables/table3_conformal.csv,"results/evaluation/dreaddit/long/*.parquet, groups/*.parquet"
+"Table 4: LLMs, S-tok vs S-verb vs S-cons (+ prompts P1-P3)",table,tables/table4_llms.csv,"results/evaluation/dreaddit/long/*.parquet, classification.csv, results/llm/dreaddit/*_run_summary.csv"
+Table 5: SDCNL replication,table,tables/table5_sdcnl.csv,results/evaluation/sdcnl/long/*.parquet
+"Table 6: hypotheses H1-H6, R1-R3 (primary aggregation)",table,tables/table6_hypotheses.csv,"long tables, LODO, mechanisms/raw/auroc.parquet, classification"
+Appendix: Table 6 under the pooled seed x resplit aggregation (verdicts that differ),appendix table,tables/appendix_table6_sensitivity_pooled.csv,as Table 6
+"Appendix tables: unanimous rows, confident-miss LIWC, missing agreement, jitter, permutation p, LLM mass",appendix tables,"tables/appendix_{unanimous,confident_miss_liwc,missing_agreement,jitter,official_test_permutation,llm_mass}.csv","mechanisms/raw/*.parquet, long tables, official_test_permutation.csv, results/llm/*/*_run_summary.csv"
+Table and figure captions,captions,tables/captions.md; figures/captions.md,safe_on_clean_text/paper/build.py
+Results digest: every cited number with its source file,digest,results_digest.md,"results/paper/tables, figures/*.csv, results/checks, sdcnl addendum"
+Appendix: SDCNL exploratory addendum (post hoc),appendix table,results/evaluation/sdcnl/exploratory_addendum.csv (safe_on_clean_text/analyses/exploratory.py),SDCNL / Dreaddit long tables and predictions
