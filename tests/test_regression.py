@@ -8,14 +8,14 @@ from safe_on_clean_text.conformal.methods import predict_sets
 from safe_on_clean_text.conformal.metrics import triage_frame, summarize_indicators
 from safe_on_clean_text.conformal.thresholds import conformal_rank, conformal_threshold
 
-# Regression on the DistilBERT predictions of commit 569d312 (calibration 454 rows, test 715 rows), in two parts
+# Regression on the DistilBERT predictions of the original code (calibration 454 rows, test 715 rows), in two parts
 # replacing a plain "same numbers as the old code" check:
 #   (a) new M0 with the conformal rule (k-th smallest score, k = ceil((n + 1)(1 - alpha))) -> frozen new constants;
 #   (b) the same set construction with the (k + 1)-th score reproduces the old code's output exactly.
 # The old code used np.quantile(scores, k / n, method="higher"), which returns the (k + 1)-th score
 # whenever k < n (one rank too conservative); that rank is the only difference between old and new code.
-# Fixture: the calibration and test rows of results/predictions/transformer_predictions.csv at commit 569d312 of the
-# development history, reduced to id, split, label and the two probabilities (values copied as written, no text).
+# Fixture: the calibration and test rows of results/predictions/transformer_predictions.csv of the original
+# code, reduced to id, split, label and the two probabilities (values copied as written, no text).
 REGRESSION_FIXTURE = REPO / "tests/fixtures/regression_569d312.csv"
 
 
@@ -39,7 +39,7 @@ REGRESSION_NEW_M0 = {
 }
 
 
-# Old code output (results/tables/conformal_metrics.csv of 569d312), reproduced with the old code before it was deleted.
+# Old code output (results/tables/conformal_metrics.csv), reproduced with the old code before it was deleted.
 REGRESSION_OLD_CODE = {
     0.1: {
         "threshold": 0.945091568,
@@ -65,7 +65,7 @@ REGRESSION_TOLERANCE = 1e-12
 
 def check_regression() -> list[tuple[str, Any]]:
     """
-    Two-part regression on the DistilBERT predictions of commit 569d312:
+    Two-part regression on the DistilBERT predictions of the original code:
     (a) new M0 (k-th score) matches the frozen new constants and its threshold is the k-th score;
     (b) the (k + 1)-th score with the same set construction reproduces the old code's output.
     """

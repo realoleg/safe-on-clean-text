@@ -54,9 +54,9 @@ ratio is 1.00 by construction.
 H7–H10 values are in [`results/paper/tables/table7_hypotheses_h7_h10.csv`](results/paper/tables/table7_hypotheses_h7_h10.csv)
 and H11–H13 values in [`results/paper/tables/table8_hypotheses_h11_h13.csv`](results/paper/tables/table8_hypotheses_h11_h13.csv).
 
-### Criteria H7–H10 (fixed before running)
+### Criteria H7–H10
 
-These criteria were fixed on 2026-10-19, before the analyses were run. All four use Dreaddit, the same 7 models,
+All four use Dreaddit, the same 7 models,
 α = 0.10 and 1,000 grouped resplits. Encoders are averaged over their seeds within each resplit, and workload is the
 share of posts not dismissed at risk prevalence π = 0.10. Results are medians with 2.5–97.5% ranges over resplits.
 
@@ -86,9 +86,9 @@ share of posts not dismissed at risk prevalence π = 0.10. Results are medians w
   sizes, as in H3c) in at least 9 of 11 conditions for at least 4 of 7 models. The marginal version and variant (b),
   with clean validation posts as the source and the weights applied to the clean calibration set, are descriptive.
 
-### Criteria H11–H13 (fixed before running)
+### Criteria H11–H13
 
-These criteria were fixed on 2026-10-20, before any coverage on naturally short posts was computed. They use the same
+H11–H13 use the same
 data, models, α, resplits, seed averaging and workload definition as H7–H10. Dreaddit excerpts are cut from longer
 posts ("We partition the posts into contiguous five-sentence chunks for labeling", Turcan and McKeown, 2019, §3.2), so
 short excerpts are a natural counterpart of truncation. Length is the clean word count. Long posts have at least the
